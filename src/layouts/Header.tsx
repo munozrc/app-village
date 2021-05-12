@@ -19,10 +19,11 @@ const ContainerLogo = styled.div`
   align-items: center;
   border-right: 1px solid rgba(68, 68, 68, 0.2);
 `;
+
 const Logo = styled.h1`
   font-size: 1.6em;
   background: #181818;
   color: white;
   border-radius: 4px;
-  padding: 5px 20px;
+  padding: 5px 20px 7px 20px;
 `;
