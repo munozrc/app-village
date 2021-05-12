@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <HeaderContainer>
       <ContainerLogo>
-        <Logo>Softlink</Logo>
+        <Logo>SoftLink</Logo>
       </ContainerLogo>
       <div>Search</div>
     </HeaderContainer>
