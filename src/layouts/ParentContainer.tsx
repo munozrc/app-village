@@ -10,7 +10,7 @@ const Container = styled.main`
   height: 100vh;
   display: grid;
   grid-template-columns: 300px 1fr;
-  grid-template-rows: 60px 1fr;
+  grid-template-rows: 70px 1fr;
   grid-template-areas:
     "header header"
     "sidebar page"
@@ -26,7 +26,7 @@ export const HeaderContainer = styled.header`
   display: grid;
   grid-template-columns: 300px 1fr;
   grid-template-rows: 1fr;
-  grid-template-areas: "logo" "tools";
+  grid-template-areas: "logo tools";
   border-bottom: 1px solid rgba(68, 68, 68, 0.2);
 `;
 

@@ -13,13 +13,23 @@ export default function Header({ toggleTheme }: HeaderProps) {
           <Logo>SOFTLINK</Logo>
         </RectangleLogo>
       </ContainerLogo>
-      <button onClick={toggleTheme}>Theme</button>
+      <ContainerTools>
+        <button onClick={toggleTheme}>Theme</button>
+      </ContainerTools>
     </HeaderContainer>
   );
 }
 
 const ContainerLogo = styled.div`
   grid-area: logo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid rgba(68, 68, 68, 0.2);
+`;
+
+const ContainerTools = styled.div`
+  grid-area: tools;
   display: flex;
   justify-content: center;
   align-items: center;
