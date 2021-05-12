@@ -7,36 +7,13 @@ const ParentContainer: FC = ({ children }) => {
 
 const Container = styled.main`
   width: 100vw;
+  max-width: 1200px;
   height: 100vh;
-  display: grid;
-  grid-template-columns: 300px 1fr;
-  grid-template-rows: 70px 1fr;
-  grid-template-areas:
-    "header header"
-    "sidebar page"
-    "sidebar page"
-    "sidebar page"
-    "sidebar page";
-`;
+  margin: 0 auto;
 
-export const HeaderContainer = styled.header`
-  grid-area: header;
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-columns: 300px 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "logo tools";
-  border-bottom: 1px solid rgba(68, 68, 68, 0.2);
-`;
-
-export const SidebarContainer = styled.div`
-  grid-area: sidebar;
-  border-right: 1px solid rgba(68, 68, 68, 0.2);
-`;
-
-export const PageContainer = styled.div`
-  grid-area: page;
+  @media (max-width: 600px) {
+    padding: 0 20px;
+  }
 `;
 
 export default ParentContainer;

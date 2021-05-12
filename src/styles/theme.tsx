@@ -8,11 +8,11 @@ declare module "styled-components" {
 }
 
 export const lightTheme: DefaultTheme = {
-  text: "#363537",
+  text: "#181818",
   background: "#fff",
 };
 
 export const darkTheme: DefaultTheme = {
   text: "#fff",
-  background: "#363537",
+  background: "#181818",
 };
