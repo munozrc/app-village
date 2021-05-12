@@ -9,7 +9,9 @@ export default function Header({ toggleTheme }: HeaderProps) {
   return (
     <HeaderContainer>
       <ContainerLogo>
-        <Logo>SoftLink</Logo>
+        <RectangleLogo>
+          <Logo>SOFTLINK</Logo>
+        </RectangleLogo>
       </ContainerLogo>
       <button onClick={toggleTheme}>Theme</button>
     </HeaderContainer>
@@ -24,10 +26,15 @@ const ContainerLogo = styled.div`
   border-right: 1px solid rgba(68, 68, 68, 0.2);
 `;
 
-const Logo = styled.h1`
-  font-size: 1.6em;
-  background: ${({ theme }) => theme.background};
-  color: white;
+const RectangleLogo = styled.div`
+  background: ${({ theme }) => theme.text};
   border-radius: 4px;
-  padding: 5px 20px 7px 20px;
+  padding: 10px 30px;
+`;
+
+const Logo = styled.h1`
+  font-size: 1.5em;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: ${({ theme }) => theme.background};
 `;
