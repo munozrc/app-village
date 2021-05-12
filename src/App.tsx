@@ -1,3 +1,14 @@
+import Header from "./layouts/Header";
+import ParentContainer from "./layouts/ParentContainer";
+import Sidebar from "./layouts/Sidebar";
+import Home from "./pages/Home";
+
 export default function App() {
-  return <h1>SoftLink</h1>;
+  return (
+    <ParentContainer>
+      <Header />
+      <Sidebar />
+      <Home />
+    </ParentContainer>
+  );
 }
