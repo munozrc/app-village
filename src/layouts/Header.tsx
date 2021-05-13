@@ -1,8 +1,6 @@
 import styled from "styled-components";
-
-type ContainerButtonsProps = {
-  gap?: string;
-};
+import { IoSearch, IoInvertMode } from "react-icons/io5";
+import SimpleContainer from "./SimpleContainer";
 
 type HeaderProps = {
   toggleTheme: (event: React.MouseEvent<HTMLButtonElement>) => void;
@@ -11,13 +9,15 @@ type HeaderProps = {
 export default function Header({ toggleTheme }: HeaderProps) {
   return (
     <Container>
-      <Logo onClick={toggleTheme}>SOFTLINK</Logo>
-      <ContainerButtons gap={"5px"}>
-        <Button>Inicio</Button>
-        <Button>Programas</Button>
-        <Button>Apps</Button>
-        <Button>Archivos</Button>
-      </ContainerButtons>
+      <Logo>SOFTLINK</Logo>
+      <SimpleContainer gap={"5px"}>
+        <Button>
+          <IoSearch size={"1.5em"} />
+        </Button>
+        <Button onClick={toggleTheme}>
+          <IoInvertMode size={"1.5em"} />
+        </Button>
+      </SimpleContainer>
     </Container>
   );
 }
@@ -30,27 +30,30 @@ const Container = styled.div`
   align-items: center;
 `;
 
-const ContainerButtons = styled.div`
-  display: flex;
-  & > button {
-    margin: ${({ gap }: ContainerButtonsProps) => gap};
-  }
-`;
-
 const Button = styled.button`
-  border: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid ${({ theme }) => theme.text};
   border-radius: 4px;
   background: ${({ theme }) => theme.background};
-  color: ${({ theme }) => theme.text};
-  font-size: 1em;
-  font-weight: 600;
-  padding: 6px 15px;
   cursor: pointer;
   transition: all 0.3s ease;
+  outline: none;
 
   &:hover {
     background: ${({ theme }) => theme.text};
-    color: ${({ theme }) => theme.background};
+  }
+
+  &:hover svg {
+    fill: ${({ theme }) => theme.background};
+    stroke: ${({ theme }) => theme.background};
+  }
+
+  &:focus {
+    box-shadow: 0px 0px 0px 3px ${({ theme }) => theme.outlineColor};
   }
 `;
 
@@ -63,4 +66,9 @@ const Logo = styled.button`
   font-weight: 700;
   padding: 6px 15px;
   cursor: pointer;
+  outline: none;
+
+  &:focus {
+    box-shadow: 0px 0px 0px 3px ${({ theme }) => theme.outlineColor};
+  }
 `;
