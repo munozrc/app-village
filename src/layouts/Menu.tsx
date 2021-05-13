@@ -35,25 +35,27 @@ export default function Menu() {
 }
 
 const Nav = styled.nav`
-  background: ${({ theme }) => theme.body};
+  width: 230px;
+  background: ${({ theme }) => theme.background};
   padding: 20px;
   border-radius: 4px;
-  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 20px;
 
   & > button {
-    margin: 0 5px;
+    margin: 5px 0px;
   }
 `;
 
 const NavItem = styled.button`
-  border: 2.5px solid ${({ theme }) => theme.body};
+  width: 100%;
+  border: 2.5px solid ${({ theme }) => theme.background};
   border-radius: 4px;
-  background: ${({ theme }) => theme.body};
+  background: ${({ theme }) => theme.background};
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   padding: 5px 10px;
   font-weight: 600;

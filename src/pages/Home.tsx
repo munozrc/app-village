@@ -1,3 +1,9 @@
+import WrapperContent from "../layouts/WrapperContent";
+
 export default function Home() {
-  return <h1>HOME</h1>;
+  return (
+    <WrapperContent>
+      <h1>HOME</h1>
+    </WrapperContent>
+  );
 }

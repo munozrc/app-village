@@ -18,7 +18,7 @@ export const lightTheme: DefaultTheme = {
 
 export const darkTheme: DefaultTheme = {
   text: "#fff",
-  background: "#2c2f33",
+  background: "#23272a",
   outlineColor: "#22b2da",
-  body: "#23272a",
+  body: "#2c2f33",
 };
