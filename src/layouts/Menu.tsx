@@ -1,17 +1,41 @@
 import styled from "styled-components";
+import {
+  IoCodeSlashOutline,
+  IoDocumentTextOutline,
+  IoGameControllerOutline,
+} from "react-icons/io5";
+
+type iconProps = {
+  color: string;
+};
 
 export default function Menu() {
   return (
     <Nav>
-      <NavItem>Programas</NavItem>
-      <NavItem>Archivos</NavItem>
-      <NavItem>Juegos</NavItem>
+      <NavItem>
+        <Icon color={"#28c7fa"}>
+          <IoCodeSlashOutline />
+        </Icon>
+        Programas
+      </NavItem>
+      <NavItem>
+        <Icon color={"#83e85a"}>
+          <IoDocumentTextOutline />
+        </Icon>
+        Archivos
+      </NavItem>
+      <NavItem>
+        <Icon color={"#ff5959"}>
+          <IoGameControllerOutline />
+        </Icon>
+        Juegos
+      </NavItem>
     </Nav>
   );
 }
 
 const Nav = styled.nav`
-  background: ${({ theme }) => theme.background};
+  background: ${({ theme }) => theme.body};
   padding: 20px;
   border-radius: 4px;
   width: 100%;
@@ -25,9 +49,9 @@ const Nav = styled.nav`
 `;
 
 const NavItem = styled.button`
-  border: 2.5px solid ${({ theme }) => theme.background};
+  border: 2.5px solid ${({ theme }) => theme.body};
   border-radius: 4px;
-  background: ${({ theme }) => theme.background};
+  background: ${({ theme }) => theme.body};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,5 +67,22 @@ const NavItem = styled.button`
 
   &:hover {
     border: 2.5px solid ${({ theme }) => theme.text};
+  }
+`;
+
+const Icon = styled.span`
+  width: 42px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: ${({ color }: iconProps) => color};
+  margin-right: 15px;
+
+  & svg {
+    margin: 0;
+    font-size: 1.6em;
+    stroke: ${({ theme }) => theme.text};
   }
 `;
