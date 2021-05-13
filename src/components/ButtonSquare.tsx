@@ -6,7 +6,7 @@ const ButtonSquare = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid ${({ theme }) => theme.text};
+  border: 2px solid ${({ theme }) => theme.background};
   border-radius: 4px;
   background: ${({ theme }) => theme.background};
   cursor: pointer;

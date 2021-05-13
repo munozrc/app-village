@@ -37,7 +37,7 @@ const Container = styled.div`
 `;
 
 const Logo = styled.button`
-  border: none;
+  border: 2px solid ${({ theme }) => theme.background};
   border-radius: 4px;
   background: ${({ theme }) => theme.text};
   color: ${({ theme }) => theme.background};
