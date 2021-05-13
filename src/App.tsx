@@ -6,6 +6,7 @@ import ParentContainer from "./layouts/ParentContainer";
 import useTheme from "./hooks/useTheme";
 import Header from "./layouts/Header";
 import Home from "./pages/Home";
+import Menu from "./layouts/Menu";
 
 export default function App() {
   const { theme, toggleTheme } = useTheme();
@@ -15,6 +16,7 @@ export default function App() {
       <GlobalStyles />
       <ParentContainer>
         <Header toggleTheme={toggleTheme} />
+        <Menu />
         <Home />
       </ParentContainer>
     </ThemeProvider>
