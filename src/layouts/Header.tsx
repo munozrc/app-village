@@ -5,7 +5,8 @@ import SimpleContainer from "./SimpleContainer";
 import ButtonSquare from "../components/ButtonSquare";
 
 // Assets
-import { IoSearch, IoInvertMode } from "react-icons/io5";
+import { IoSearch } from "react-icons/io5";
+import { ImSun } from "react-icons/im";
 
 type HeaderProps = {
   toggleTheme: (event: React.MouseEvent<HTMLButtonElement>) => void;
@@ -20,7 +21,7 @@ export default function Header({ toggleTheme }: HeaderProps) {
           <IoSearch size={"1.5em"} />
         </ButtonSquare>
         <ButtonSquare onClick={toggleTheme}>
-          <IoInvertMode size={"1.5em"} />
+          <ImSun size={"1.5em"} />
         </ButtonSquare>
       </SimpleContainer>
     </Container>
