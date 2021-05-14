@@ -10,10 +10,7 @@ const Container = styled.main`
   max-width: 1200px;
   height: 100vh;
   margin: 0 auto;
-
-  @media (max-width: 600px) {
-    padding: 0 20px;
-  }
+  padding: 0 30px;
 `;
 
 export default ParentContainer;

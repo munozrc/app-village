@@ -35,11 +35,10 @@ export default function Header({ toggleTheme }: HeaderProps) {
 
 const Container = styled.div`
   width: 100%;
-  height: 140px;
+  height: 120px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
 `;
 
 const Logo = styled.h1`
@@ -50,12 +49,26 @@ const Logo = styled.h1`
 
 const ButtonLink = styled.button`
   background: transparent;
+  padding: 2px 6px;
   border: none;
   color: ${({ theme }) => theme.text};
   font-size: 20px;
   font-weight: normal;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
 
-  @media (max-width: 600px) {
+  &:hover {
+    background: ${({ theme }) => theme.text};
+    color: ${({ theme }) => theme.background};
+  }
+
+  &:focus {
+    box-shadow: 0px 0px 0px 3px ${({ theme }) => theme.outlineColor};
+  }
+
+  @media (max-width: 780px) {
     display: none;
   }
 `;
