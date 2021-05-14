@@ -16,12 +16,17 @@ export default function Header({ toggleTheme }: HeaderProps) {
   return (
     <Container>
       <Logo>SOFTLINK</Logo>
+      <SimpleContainer gap={"20px"}>
+        <ButtonLink>Programas</ButtonLink>
+        <ButtonLink>Archivos</ButtonLink>
+        <ButtonLink>Juegos</ButtonLink>
+      </SimpleContainer>
       <SimpleContainer gap={"5px"}>
         <ButtonSquare>
-          <IoSearch size={"1.5em"} />
+          <IoSearch size={"22px"} />
         </ButtonSquare>
         <ButtonSquare onClick={toggleTheme}>
-          <ImSun size={"1.5em"} />
+          <ImSun size={"22px"} />
         </ButtonSquare>
       </SimpleContainer>
     </Container>
@@ -30,24 +35,27 @@ export default function Header({ toggleTheme }: HeaderProps) {
 
 const Container = styled.div`
   width: 100%;
-  height: 80px;
+  height: 140px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 20px;
 `;
 
-const Logo = styled.button`
-  border: 2px solid ${({ theme }) => theme.background};
-  border-radius: 4px;
-  background: ${({ theme }) => theme.text};
-  color: ${({ theme }) => theme.background};
-  font-size: 1.5em;
+const Logo = styled.h1`
+  font-size: 25px;
   font-weight: 700;
-  padding: 6px 15px;
-  cursor: pointer;
-  outline: none;
+  border-bottom: 4px solid ${({ theme }) => theme.text};
+`;
 
-  &:focus {
-    box-shadow: 0px 0px 0px 3px ${({ theme }) => theme.outlineColor};
+const ButtonLink = styled.button`
+  background: transparent;
+  border: none;
+  color: ${({ theme }) => theme.text};
+  font-size: 20px;
+  font-weight: normal;
+
+  @media (max-width: 600px) {
+    display: none;
   }
 `;

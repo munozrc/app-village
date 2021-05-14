@@ -6,9 +6,9 @@ const ButtonSquare = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid ${({ theme }) => theme.background};
+  border: 2px solid transparent;
   border-radius: 4px;
-  background: ${({ theme }) => theme.background};
+  background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
   outline: none;
