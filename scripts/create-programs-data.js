@@ -53,6 +53,7 @@ let programs_data = [];
           title: metadata.title ? metadata.title : "No title given",
           category: metadata.category ? metadata.category : "none",
           download: metadata.download ? metadata.download : "/",
+          icon: metadata.icon ? metadata.icon : undefined,
           content: content ? content : "No content given",
         };
 
