@@ -12,7 +12,7 @@ type HeaderProps = {
   toggleTheme: (event: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
-export default function Header({ toggleTheme }: HeaderProps) {
+export default function Navigation({ toggleTheme }: HeaderProps) {
   return (
     <Container>
       <Logo>SOFTLINK</Logo>

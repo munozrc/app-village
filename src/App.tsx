@@ -4,7 +4,7 @@ import { lightTheme, darkTheme } from "./styles/theme";
 
 import ParentContainer from "./layouts/ParentContainer";
 import useTheme from "./hooks/useTheme";
-import Header from "./layouts/Header";
+import Navigation from "./layouts/Navigation";
 
 export default function App() {
   const { theme, toggleTheme } = useTheme();
@@ -13,7 +13,7 @@ export default function App() {
     <ThemeProvider theme={themeMode}>
       <GlobalStyles />
       <ParentContainer>
-        <Header toggleTheme={toggleTheme} />
+        <Navigation toggleTheme={toggleTheme} />
       </ParentContainer>
     </ThemeProvider>
   );
