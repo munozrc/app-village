@@ -1,18 +1,20 @@
 import styled from "styled-components";
 
-export default function CardSimple() {
+type CardSimpleProps = {
+  icon: string;
+  title: string;
+  category: string;
+};
+
+export default function CardSimple({ icon, title, category }: CardSimpleProps) {
   return (
     <Card>
       <BoxIcon>
-        <Icon
-          src={
-            "https://drive.google.com/uc?export=download&id=1jZRhWs7y65eu_xszTJe4P_Yf3Mn3_X_3"
-          }
-        />
+        <Icon src={icon} />
       </BoxIcon>
       <TextGroup>
-        <Title>Microsoft Office 2016</Title>
-        <Category>Programa</Category>
+        <Title>{title}</Title>
+        <Category>{category}</Category>
       </TextGroup>
     </Card>
   );
@@ -33,7 +35,9 @@ const Card = styled.button`
 const BoxIcon = styled.div`
   width: 70px;
   height: 70px;
-  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: ${({ theme }) => theme.text};
   border-radius: 4px;
 `;
@@ -58,6 +62,6 @@ const Category = styled.span`
 `;
 
 const Icon = styled.img`
-  max-width: 80%;
-  /* filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.6)); */
+  max-width: 40px;
+  filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.2));
 `;

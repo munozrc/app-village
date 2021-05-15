@@ -1,17 +1,26 @@
 import styled from "styled-components";
 import CardSimple from "./CardSimple";
 
+import programsList from "../data/programs.json";
+
+type programsProps = {
+  icon: string;
+  title: string;
+  category: string;
+};
+
 export default function LastAdded() {
   return (
     <Wrapper>
       <Title>Añadidos Recientemente</Title>
       <List>
-        <CardSimple />
-        <CardSimple />
-        <CardSimple />
-        <CardSimple />
-        <CardSimple />
-        <CardSimple />
+        {programsList.map((program: programsProps) => (
+          <CardSimple
+            icon={program.icon}
+            title={program.title}
+            category={program.category}
+          />
+        ))}
       </List>
     </Wrapper>
   );
