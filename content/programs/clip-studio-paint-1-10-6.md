@@ -1,8 +1,8 @@
 ---
-title: Microsoft Office 2016
+title: Clip Studio Paint 1.10.6
 category: Programa
 download: https://www.google.com
-icon: https://drive.google.com/uc?export=download&id=1jZRhWs7y65eu_xszTJe4P_Yf3Mn3_X_3
+icon: https://drive.google.com/uc?export=download&id=1Pura0u0VVDzUo0Mv6W2mGhEuQeJxPzNN
 ---
 
 ### Intrucciones de Instacion
