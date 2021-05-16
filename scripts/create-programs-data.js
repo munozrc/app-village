@@ -5,7 +5,7 @@ const contentFolder = path.join(process.cwd(), "/content/programs");
 
 let programs_data = [];
 
-(() => {
+(async () => {
   fs.readdir(contentFolder, (error, files) => {
     // Catch error
     if (error) {
@@ -15,6 +15,11 @@ let programs_data = [];
     files.forEach((file, index) => {
       fs.readFile(`${contentFolder}/${file}`, "utf8", (error, contents) => {
         let obj = {};
+
+        // Catch error
+        if (error) {
+          return console.log("❌ Failed to read file: ", error);
+        }
 
         const getMetadataIndices = (acc, elem, index) => {
           if (/^---/.test(elem)) {
@@ -47,9 +52,12 @@ let programs_data = [];
         const metadataIndices = lines.reduce(getMetadataIndices, []);
         const metadata = parseMetadata({ lines, metadataIndices });
         const content = parseContent({ lines, metadataIndices });
+        const date = new Date(metadata.date);
+        const timestamp = date.getTime() / 1000;
 
         let post = {
-          id: index,
+          id: timestamp,
+          date: metadata.date ? metadata.date : "No date given",
           title: metadata.title ? metadata.title : "No title given",
           category: metadata.category ? metadata.category : "none",
           download: metadata.download ? metadata.download : "/",
@@ -57,15 +65,23 @@ let programs_data = [];
           content: content ? content : "No content given",
         };
 
+        // Add data to array
         programs_data.push(post);
+        console.log(`👌 readed --> ${post.title}`);
 
         if (index === files.length - 1) {
-          let data = JSON.stringify(programs_data);
-          fs.writeFileSync(
+          const sortedList = programs_data.sort((a, b) => {
+            return a.id < b.id ? 1 : -1;
+          });
+          let data = JSON.stringify(sortedList);
+          fs.writeFile(
             path.join(process.cwd(), "src/data/programs.json"),
-            data
+            data,
+            (err) => {
+              if (err) throw err;
+              console.log(`✅ file created successfully`);
+            }
           );
-          console.log(`✅ add ${post.title}`);
         }
       });
     });
