@@ -4,6 +4,7 @@ import CardSimple from "./CardSimple";
 import programsList from "../data/programs.json";
 
 type programsProps = {
+  id: number;
   icon: string;
   title: string;
   category: string;
@@ -16,6 +17,7 @@ export default function LastAdded() {
       <List>
         {programsList.map((program: programsProps) => (
           <CardSimple
+            key={program.id}
             icon={program.icon}
             title={program.title}
             category={program.category}
