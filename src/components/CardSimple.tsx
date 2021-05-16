@@ -40,7 +40,6 @@ const BoxIcon = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: ${({ theme }) => theme.text};
   border-radius: 4px;
 `;
 
@@ -51,6 +50,6 @@ const Title = styled.h4`
 `;
 
 const Icon = styled.img`
-  max-width: 56px;
+  max-width: 80px;
   filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.2));
 `;
