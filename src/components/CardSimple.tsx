@@ -30,6 +30,10 @@ const Card = styled.button`
   border-radius: 4px;
   background: ${({ theme }) => theme.background};
   cursor: pointer;
+
+  @media (max-width: 460px) {
+    width: 100%;
+  }
 `;
 
 const BoxIcon = styled.div`

@@ -7,7 +7,7 @@ type props = {
 const SimpleContainer = styled.div`
   display: flex;
   & > button {
-    margin: ${({ gap }: props) => gap};
+    margin-left: ${({ gap }: props) => gap};
   }
 `;
 

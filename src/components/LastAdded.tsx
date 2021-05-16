@@ -50,6 +50,6 @@ const Title = styled.h3`
   margin-right: 30px;
 
   @media (max-width: 459px) {
-    margin-right: 10px;
+    margin-right: 0px;
   }
 `;
