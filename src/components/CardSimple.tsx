@@ -12,33 +12,31 @@ export default function CardSimple({ icon, title, category }: CardSimpleProps) {
       <BoxIcon>
         <Icon src={icon} />
       </BoxIcon>
-      <TextGroup>
-        <Title>{title}</Title>
-        <Category>{category}</Category>
-      </TextGroup>
+      <Title>{title}</Title>
     </Card>
   );
 }
 
 const Card = styled.button`
-  width: 340px;
-  height: 106px;
+  width: 130px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  padding-left: 20px;
   border: none;
   border-radius: 4px;
-  background: ${({ theme }) => theme.background};
+  padding: 15px 10px;
+  background: ${({ theme }) => theme.body};
+  transition: box-shadow 0.3s ease;
   cursor: pointer;
 
-  @media (max-width: 460px) {
-    width: 100%;
+  &:hover {
+    box-shadow: 0px 0px 0px 2px ${({ theme }) => theme.text};
   }
 `;
 
 const BoxIcon = styled.div`
-  width: 70px;
-  height: 70px;
+  width: 100px;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,26 +44,13 @@ const BoxIcon = styled.div`
   border-radius: 4px;
 `;
 
-const TextGroup = styled.div`
-  margin-left: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-`;
-
 const Title = styled.h4`
-  font-size: 1.2em;
-  font-weight: 700;
-  margin-bottom: 2px;
-`;
-
-const Category = styled.span`
-  width: fit-content;
-  font-weight: 300;
-  font-size: 1.1em;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 6px;
 `;
 
 const Icon = styled.img`
-  max-width: 40px;
+  max-width: 56px;
   filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.2));
 `;

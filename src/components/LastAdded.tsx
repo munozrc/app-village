@@ -15,14 +15,16 @@ export default function LastAdded() {
     <Wrapper>
       <Title>Añadidos Recientemente</Title>
       <List>
-        {programsList.map((program: programsProps) => (
-          <CardSimple
-            key={program.id}
-            icon={program.icon}
-            title={program.title}
-            category={program.category}
-          />
-        ))}
+        <WrapperList>
+          {programsList.map((program: programsProps) => (
+            <CardSimple
+              key={program.id}
+              icon={program.icon}
+              title={program.title}
+              category={program.category}
+            />
+          ))}
+        </WrapperList>
       </List>
     </Wrapper>
   );
@@ -30,26 +32,29 @@ export default function LastAdded() {
 
 const List = styled.div`
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-
-  & > button {
-    margin-bottom: 20px;
-  }
+  background: ${({ theme }) => theme.background};
+  overflow-y: hidden;
+  overflow-x: auto;
+  padding: 15px;
+  border-radius: 4px;
 `;
 
 const Wrapper = styled.div`
   width: 100%;
 `;
 
+const WrapperList = styled.div`
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+
+  & > button {
+    margin-right: 15px;
+  }
+`;
+
 const Title = styled.h3`
   float: right;
-  font-size: 1.1em;
+  font-size: 1em;
   margin-bottom: 10px;
-  margin-right: 30px;
-
-  @media (max-width: 459px) {
-    margin-right: 0px;
-  }
 `;

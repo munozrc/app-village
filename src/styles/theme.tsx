@@ -11,14 +11,14 @@ declare module "styled-components" {
 
 export const lightTheme: DefaultTheme = {
   text: "#23272a",
-  background: "#fafafa",
+  background: "#e4e4e4",
   outlineColor: "#22b2da",
-  body: "#e4e4e4",
+  body: "#fafafa",
 };
 
 export const darkTheme: DefaultTheme = {
   text: "#fafafa",
-  background: "#2c2f33",
+  background: "#23272a",
   outlineColor: "#22b2da",
-  body: "#23272a",
+  body: "#2c2f33",
 };
