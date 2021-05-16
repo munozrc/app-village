@@ -14,16 +14,21 @@ const ButtonSquare = styled.button`
   outline: none;
 
   &:hover {
-    background: ${({ theme }) => theme.text};
+    background: #23272a;
+  }
+
+  & svg {
+    fill: #23272a;
+    stroke: #23272a;
   }
 
   &:hover svg {
-    fill: ${({ theme }) => theme.background};
-    stroke: ${({ theme }) => theme.background};
+    fill: #fafafa;
+    stroke: #fafafa;
   }
 
   &:focus {
-    box-shadow: 0px 0px 0px 3px ${({ theme }) => theme.outlineColor};
+    box-shadow: 0px 0px 0px 3px #fafafa;
   }
 `;
 

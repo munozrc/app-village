@@ -13,8 +13,8 @@ export default function App() {
   return (
     <ThemeProvider theme={themeMode}>
       <GlobalStyles />
+      <Navigation toggleTheme={toggleTheme} />
       <ParentContainer>
-        <Navigation toggleTheme={toggleTheme} />
         <LastAdded />
       </ParentContainer>
     </ThemeProvider>
