@@ -10,8 +10,20 @@ export const Container = styled.div`
   height: 80px;
   display: flex;
   justify-content: center;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   background: ${PRIMARY_COLOR};
+  border-bottom: 10px solid #ff9a3c;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 10px;
+    width: 100vw;
+    height: 80px;
+    border-bottom: 10px solid #ff6f3c;
+    z-index: -1;
+  }
 `;
 
 export const ContainerCenter = styled.div`
