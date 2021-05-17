@@ -33,6 +33,7 @@ export const Logo = styled.h1`
   font-weight: 700;
   border-bottom: 4px solid ${SECONDARY_COLOR};
   color: ${SECONDARY_COLOR};
+  cursor: pointer;
 `;
 
 export const ButtonLink = styled.button`

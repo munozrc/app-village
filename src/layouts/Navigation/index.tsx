@@ -11,16 +11,22 @@ import {
 // Assets
 import { IoSearch } from "react-icons/io5";
 import { ImSun } from "react-icons/im";
+import { useHistory } from "react-router";
 
 type HeaderProps = {
   toggleTheme: (event: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
 export default function Navigation({ toggleTheme }: HeaderProps) {
+  const history = useHistory();
+  const handleHome = (): void => {
+    history.push({ pathname: "/" });
+  };
+
   return (
     <Container>
       <ContainerCenter>
-        <Logo>SOFTLINK</Logo>
+        <Logo onClick={handleHome}>SOFTLINK</Logo>
         <SimpleContainer>
           <ButtonLink>Programas</ButtonLink>
           <ButtonLink>Archivos</ButtonLink>
