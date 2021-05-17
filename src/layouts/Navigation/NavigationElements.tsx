@@ -12,18 +12,6 @@ export const Container = styled.div`
   justify-content: center;
   margin-bottom: 30px;
   background: ${PRIMARY_COLOR};
-  border-bottom: 10px solid #ff9a3c;
-  position: relative;
-
-  &::after {
-    position: absolute;
-    content: "";
-    top: 10px;
-    width: 100vw;
-    height: 80px;
-    border-bottom: 10px solid #ff6f3c;
-    z-index: -1;
-  }
 `;
 
 export const ContainerCenter = styled.div`
@@ -43,8 +31,8 @@ export const ContainerCenter = styled.div`
 export const Logo = styled.h1`
   font-size: 25px;
   font-weight: 700;
-  border-bottom: 4px solid ${SECONDARY_COLOR};
-  color: ${SECONDARY_COLOR};
+  border-bottom: 4px solid ${WHITE_COLOR};
+  color: ${WHITE_COLOR};
   cursor: pointer;
 `;
 
@@ -53,7 +41,7 @@ export const ButtonLink = styled.button`
   height: 41px;
   padding: 10px 20px;
   border: none;
-  color: ${SECONDARY_COLOR};
+  color: ${WHITE_COLOR};
   font-size: 1em;
   font-weight: normal;
   border-radius: 4px;
@@ -62,8 +50,8 @@ export const ButtonLink = styled.button`
   outline: none;
 
   &:hover {
-    background: ${SECONDARY_COLOR};
-    color: ${WHITE_COLOR};
+    background: ${WHITE_COLOR};
+    color: ${SECONDARY_COLOR};
   }
 
   &:focus {

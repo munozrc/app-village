@@ -15,17 +15,17 @@ const ButtonSquare = styled.button`
   outline: none;
 
   &:hover {
-    background: ${SECONDARY_COLOR};
+    background: ${WHITE_COLOR};
   }
 
   & svg {
-    fill: ${SECONDARY_COLOR};
-    stroke: ${SECONDARY_COLOR};
+    fill: ${WHITE_COLOR};
+    stroke: ${WHITE_COLOR};
   }
 
   &:hover svg {
-    fill: ${WHITE_COLOR};
-    stroke: ${WHITE_COLOR};
+    fill: ${SECONDARY_COLOR};
+    stroke: ${SECONDARY_COLOR};
   }
 
   &:focus {
