@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { SECONDARY_COLOR, WHITE_COLOR } from "../styles/colors";
 
 const ButtonSquare = styled.button`
   width: 40px;
@@ -14,21 +15,21 @@ const ButtonSquare = styled.button`
   outline: none;
 
   &:hover {
-    background: #23272a;
+    background: ${SECONDARY_COLOR};
   }
 
   & svg {
-    fill: #23272a;
-    stroke: #23272a;
+    fill: ${SECONDARY_COLOR};
+    stroke: ${SECONDARY_COLOR};
   }
 
   &:hover svg {
-    fill: #fafafa;
-    stroke: #fafafa;
+    fill: ${WHITE_COLOR};
+    stroke: ${WHITE_COLOR};
   }
 
   &:focus {
-    box-shadow: 0px 0px 0px 3px #fafafa;
+    box-shadow: 0px 0px 0px 3px ${WHITE_COLOR};
   }
 `;
 
