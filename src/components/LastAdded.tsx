@@ -32,10 +32,8 @@ export default function LastAdded() {
 
 const List = styled.div`
   width: 100%;
-  background: ${({ theme }) => theme.background};
   overflow-y: hidden;
   overflow-x: auto;
-  padding: 15px;
   border-radius: 4px;
 `;
 
@@ -47,6 +45,7 @@ const WrapperList = styled.div`
   width: fit-content;
   display: flex;
   flex-direction: row;
+  margin: 3px;
 
   & > button {
     margin-right: 15px;
@@ -54,7 +53,8 @@ const WrapperList = styled.div`
 `;
 
 const Title = styled.h3`
-  float: right;
-  font-size: 1em;
+  float: left;
+  font-size: 1.1em;
+  font-weight: 400;
   margin-bottom: 10px;
 `;

@@ -31,7 +31,7 @@ const Card = styled.button`
   border: none;
   border-radius: 4px;
   padding: 15px 10px;
-  background: ${({ theme }) => theme.body};
+  background: ${({ theme }) => theme.background};
   transition: box-shadow 0.3s ease;
   cursor: pointer;
 
@@ -50,12 +50,13 @@ const BoxIcon = styled.div`
 `;
 
 const Title = styled.h4`
-  font-size: 14px;
-  font-weight: 500;
-  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 5px;
 `;
 
 const Icon = styled.img`
-  max-width: 80px;
-  filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.2));
+  max-width: 90px;
+  /* filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.2)); */
+  border-radius: 4px;
 `;
