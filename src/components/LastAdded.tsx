@@ -46,7 +46,7 @@ const WrapperList = styled.div`
   flex-direction: row;
 
   & > button {
-    margin-right: 15px;
+    margin-right: 20px; // TODO: test with the other components
   }
 `;
 
