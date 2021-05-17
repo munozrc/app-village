@@ -1,5 +1,6 @@
 import { useHistory } from "react-router";
 import styled from "styled-components";
+import { PRIMARY_COLOR } from "../styles/colors";
 
 type CardSimpleProps = {
   icon: string;
@@ -33,11 +34,12 @@ const Card = styled.button`
   border-radius: 4px;
   padding: 15px 10px;
   background: ${({ theme }) => theme.background};
-  transition: border 0.3s ease;
+  transition: border, box-shadow 0.3s ease;
   cursor: pointer;
 
   &:hover {
-    border: solid 2px ${({ theme }) => theme.text};
+    border: solid 2px ${PRIMARY_COLOR};
+    box-shadow: 4px 4px 0 ${PRIMARY_COLOR};
   }
 `;
 

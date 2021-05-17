@@ -47,7 +47,7 @@ const WrapperList = styled.div`
 
   & > button {
     margin-right: 20px;
-    margin: 2px 20px 2px 2px; // TODO: test with the other components
+    margin: 10px 20px 10px 2px; // TODO: test with the other components
   }
 `;
 
