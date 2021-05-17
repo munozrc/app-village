@@ -1,3 +1,4 @@
+import { HashRouter as Router } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./styles/global";
 import { lightTheme, darkTheme } from "./styles/theme";
@@ -12,11 +13,13 @@ export default function App() {
   const themeMode = theme === "light" ? lightTheme : darkTheme;
   return (
     <ThemeProvider theme={themeMode}>
-      <GlobalStyles />
-      <Navigation toggleTheme={toggleTheme} />
-      <ParentContainer>
-        <LastAdded />
-      </ParentContainer>
+      <Router>
+        <GlobalStyles />
+        <Navigation toggleTheme={toggleTheme} />
+        <ParentContainer>
+          <LastAdded />
+        </ParentContainer>
+      </Router>
     </ThemeProvider>
   );
 }

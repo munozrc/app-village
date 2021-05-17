@@ -1,3 +1,4 @@
+import { useHistory } from "react-router";
 import styled from "styled-components";
 
 type CardSimpleProps = {
@@ -7,8 +8,13 @@ type CardSimpleProps = {
 };
 
 export default function CardSimple({ icon, title, category }: CardSimpleProps) {
+  const history = useHistory();
+  const handleClick = (): void => {
+    history.push({ pathname: `/${category.toLowerCase()}/` });
+  };
+
   return (
-    <Card>
+    <Card onClick={handleClick}>
       <BoxIcon>
         <Icon src={icon} />
       </BoxIcon>
