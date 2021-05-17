@@ -28,15 +28,15 @@ const Card = styled.button`
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: none;
+  border: solid 2px transparent;
   border-radius: 4px;
   padding: 15px 10px;
   background: ${({ theme }) => theme.background};
-  transition: box-shadow 0.3s ease;
+  transition: border 0.3s ease;
   cursor: pointer;
 
   &:hover {
-    box-shadow: 0px 0px 0px 2px ${({ theme }) => theme.text};
+    border: solid 2px ${({ theme }) => theme.text};
   }
 `;
 

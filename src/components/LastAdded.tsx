@@ -34,7 +34,6 @@ const List = styled.div`
   width: 100%;
   overflow-y: hidden;
   overflow-x: auto;
-  border-radius: 4px;
 `;
 
 const Wrapper = styled.div`
@@ -45,7 +44,6 @@ const WrapperList = styled.div`
   width: fit-content;
   display: flex;
   flex-direction: row;
-  margin: 3px;
 
   & > button {
     margin-right: 15px;
