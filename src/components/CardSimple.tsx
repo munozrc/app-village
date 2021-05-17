@@ -28,6 +28,7 @@ const Card = styled.button`
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 0px 0px 0px 1px ${({ theme }) => theme.borderColor};
   border: solid 2px transparent;
   border-radius: 4px;
   padding: 15px 10px;
@@ -51,7 +52,7 @@ const BoxIcon = styled.div`
 
 const Title = styled.h4`
   font-size: 12px;
-  font-weight: 400;
+  font-weight: 600;
   margin-top: 5px;
 `;
 
