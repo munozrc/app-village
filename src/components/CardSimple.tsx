@@ -6,12 +6,18 @@ type CardSimpleProps = {
   icon: string;
   title: string;
   category: string;
+  path: string;
 };
 
-export default function CardSimple({ icon, title, category }: CardSimpleProps) {
+export default function CardSimple({
+  icon,
+  title,
+  category,
+  path,
+}: CardSimpleProps) {
   const history = useHistory();
   const handleClick = (): void => {
-    history.push({ pathname: `/${category.toLowerCase()}/` });
+    history.push({ pathname: `/${category.toLowerCase()}/${path}` });
   };
 
   return (

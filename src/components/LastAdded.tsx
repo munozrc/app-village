@@ -8,6 +8,7 @@ type programsProps = {
   icon: string;
   title: string;
   category: string;
+  path: string;
 };
 
 export default function LastAdded() {
@@ -22,6 +23,7 @@ export default function LastAdded() {
               icon={program.icon}
               title={program.title}
               category={program.category}
+              path={program.path}
             />
           ))}
         </WrapperList>
