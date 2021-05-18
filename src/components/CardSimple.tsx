@@ -35,9 +35,15 @@ const Card = styled.button`
   padding: 15px 10px;
   background: ${({ theme }) => theme.background};
   transition: border, box-shadow 0.3s ease;
+  outline: none;
   cursor: pointer;
 
   &:hover {
+    border: solid 2px ${PRIMARY_COLOR};
+    box-shadow: 4px 4px 0 ${PRIMARY_COLOR};
+  }
+
+  &:focus {
     border: solid 2px ${PRIMARY_COLOR};
     box-shadow: 4px 4px 0 ${PRIMARY_COLOR};
   }
