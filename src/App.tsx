@@ -1,12 +1,17 @@
-import { HashRouter as Router } from "react-router-dom";
+import { HashRouter as Router, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./styles/global";
 import { lightTheme, darkTheme } from "./styles/theme";
 
-import ParentContainer from "./layouts/ParentContainer";
+// Hooks
 import useTheme from "./hooks/useTheme";
+
+// Components
 import Navigation from "./layouts/Navigation";
-import LastAdded from "./components/LastAdded";
+
+// Pages
+import HomePage from "./pages/HomePage";
+import ProgramPage from "./pages/ProgramPage";
 
 export default function App() {
   const { theme, toggleTheme } = useTheme();
@@ -16,9 +21,8 @@ export default function App() {
       <Router>
         <GlobalStyles />
         <Navigation toggleTheme={toggleTheme} />
-        <ParentContainer>
-          <LastAdded />
-        </ParentContainer>
+        <Route exact path={"/"} component={HomePage} />
+        <Route exact path={"/programa/:path"} component={ProgramPage} />
       </Router>
     </ThemeProvider>
   );
