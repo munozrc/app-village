@@ -53,7 +53,6 @@ const WrapperList = styled.div`
 
 const Title = styled.h3`
   float: left;
-  font-size: 1.1em;
-  font-weight: 400;
-  margin-bottom: 10px;
+  font-size: 1.25em;
+  font-weight: 700;
 `;
