@@ -59,6 +59,7 @@ let programs_data = [];
           id: timestamp,
           date: metadata.date ? metadata.date : "No date given",
           title: metadata.title ? metadata.title : "No title given",
+          path: file.replace(".md", ""),
           category: metadata.category ? metadata.category : "none",
           download: metadata.download ? metadata.download : "/",
           icon: metadata.icon ? metadata.icon : undefined,
