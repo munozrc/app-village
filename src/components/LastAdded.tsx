@@ -3,7 +3,7 @@ import CardSimple from "./CardSimple";
 
 import programsList from "../data/programs.json";
 
-type programsProps = {
+type Props = {
   id: number;
   icon: string;
   title: string;
@@ -17,7 +17,7 @@ export default function LastAdded() {
       <Title>Añadidos Recientemente</Title>
       <List>
         <WrapperList>
-          {programsList.map((program: programsProps) => (
+          {programsList.map((program: Props) => (
             <CardSimple
               key={program.id}
               icon={program.icon}
