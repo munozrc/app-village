@@ -13,11 +13,11 @@ import { IoSearch } from "react-icons/io5";
 import { ImSun } from "react-icons/im";
 import { useHistory } from "react-router";
 
-type HeaderProps = {
+type Props = {
   toggleTheme: (event: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
-export default function Navigation({ toggleTheme }: HeaderProps) {
+export default function Navigation({ toggleTheme }: Props) {
   const history = useHistory();
   const handleHome = (): void => {
     history.push({ pathname: "/" });

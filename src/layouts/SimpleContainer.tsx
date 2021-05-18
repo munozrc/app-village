@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
-type props = {
+type Props = {
   gap?: string;
 };
 
 const SimpleContainer = styled.div`
   display: flex;
   & > button {
-    margin-left: ${({ gap }: props) => gap};
+    margin-left: ${({ gap }: Props) => gap};
   }
 `;
 

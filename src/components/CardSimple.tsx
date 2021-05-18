@@ -2,19 +2,14 @@ import { useHistory } from "react-router";
 import styled from "styled-components";
 import { PRIMARY_COLOR } from "../styles/colors";
 
-type CardSimpleProps = {
+type Props = {
   icon: string;
   title: string;
   category: string;
   path: string;
 };
 
-export default function CardSimple({
-  icon,
-  title,
-  category,
-  path,
-}: CardSimpleProps) {
+export default function CardSimple({ icon, title, category, path }: Props) {
   const history = useHistory();
   const handleClick = (): void => {
     history.push({ pathname: `/${category.toLowerCase()}/${path}` });
