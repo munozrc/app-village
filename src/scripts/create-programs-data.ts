@@ -1,9 +1,20 @@
-const path = require("path");
-const fs = require("fs");
+import * as path from "path"
+import * as fs from "fs"
+
+type program = {
+  id: number,
+  date: string | null, 
+  title: string | null, 
+  path: string | null, 
+  category: string | null, 
+  download: string | null, 
+  icon: string | null,
+  content: string | null, 
+}
 
 const contentFolder = path.join(process.cwd(), "/content/programs");
+let programs_data: program[] = [];
 
-let programs_data = [];
 
 (async () => {
   fs.readdir(contentFolder, (error, files) => {
@@ -14,21 +25,25 @@ let programs_data = [];
 
     files.forEach((file, index) => {
       fs.readFile(`${contentFolder}/${file}`, "utf8", (error, contents) => {
-        let obj = {};
+        let obj:{[key: string]: string} = {};
 
         // Catch error
         if (error) {
           return console.log("❌ Failed to read file: ", error);
         }
 
-        const getMetadataIndices = (acc, elem, index) => {
+        const getMetadataIndices = (
+          acc: number[],
+          elem: string,
+          index: number 
+        ) => {
           if (/^---/.test(elem)) {
             acc.push(index);
           }
           return acc;
         };
 
-        const parseMetadata = ({ lines, metadataIndices }) => {
+        const parseMetadata = (lines: string[], metadataIndices: number[]) => {
           if (metadataIndices.length > 0) {
             let metadata = lines.slice(
               metadataIndices[0] + 1,
@@ -41,7 +56,7 @@ let programs_data = [];
           }
         };
 
-        const parseContent = ({ lines, metadataIndices }) => {
+        const parseContent = (lines: string[], metadataIndices: number[]) => {
           if (metadataIndices.length > 0) {
             lines = lines.slice(metadataIndices[1] + 1, lines.length);
           }
@@ -49,27 +64,32 @@ let programs_data = [];
         };
 
         const lines = contents.split("\n");
-        const metadataIndices = lines.reduce(getMetadataIndices, []);
-        const metadata = parseMetadata({ lines, metadataIndices });
-        const content = parseContent({ lines, metadataIndices });
-        const date = new Date(metadata.date);
-        const timestamp = date.getTime() / 1000;
+        const metadataIndices: number[] = lines.reduce(getMetadataIndices, []);
+        const content = parseContent(lines, metadataIndices);
+        const metadata = parseMetadata(lines, metadataIndices);
 
-        let post = {
-          id: timestamp,
-          date: metadata.date ? metadata.date : "No date given",
-          title: metadata.title ? metadata.title : "No title given",
-          path: file.replace(".md", ""),
-          category: metadata.category ? metadata.category : "none",
-          download: metadata.download ? metadata.download : "/",
-          icon: metadata.icon ? metadata.icon : undefined,
-          content: content ? content : "No content given",
-        };
+        if (typeof metadata !== "undefined") {
+        
+          const date = new Date(metadata.date);
+          const timestamp = date.getTime() / 1000;
 
-        // Add data to array
-        programs_data.push(post);
-        console.log(`👌 readed --> ${post.title}`);
+          let post: program = {
+            id: timestamp,
+            date: metadata.date ? metadata.date : null,
+            title: metadata.title ? metadata.title : null,
+            path: file.replace(".md", ""),
+            category: metadata.category ? metadata.category : null,
+            download: metadata.download ? metadata.download : null,
+            icon: metadata.icon ? metadata.icon : null,
+            content: content ? content : null,
+          };
 
+          // Add data to array
+          programs_data.push(post);
+          console.log(`👌 readed --> ${post.title}`);
+        }
+
+        
         if (index === files.length - 1) {
           const sortedList = programs_data.sort((a, b) => {
             return a.id < b.id ? 1 : -1;

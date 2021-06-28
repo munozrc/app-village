@@ -28,7 +28,7 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "create-programs-data": "node scripts/create-programs-data.js"
+    "create-programs-data": "tsc src/scripts/create-programs-data.ts && node src/scripts/create-programs-data.js"
   },
   "eslintConfig": {
     "extends": [
