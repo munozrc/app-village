@@ -1,6 +1,6 @@
-# Website SoftLink
+# SoftLink Website
 
-Application created with ReactJS to manage links programs and files
+Application created with ReactJS to manage links to programs.
 
 ## Available Scripts
 
