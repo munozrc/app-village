@@ -3,13 +3,13 @@ import * as fs from "fs"
 
 type program = {
   id: number,
-  date: string | null, 
-  title: string | null, 
-  path: string | null, 
-  category: string | null, 
-  download: string | null, 
-  icon: string | null,
-  content: string | null, 
+  date: string, 
+  title: string, 
+  path: string, 
+  category: string, 
+  download: string, 
+  icon: string,
+  content: string, 
 }
 
 const contentFolder = path.join(process.cwd(), "/content/programs");
@@ -43,7 +43,10 @@ let programs_data: program[] = [];
           return acc;
         };
 
-        const parseMetadata = (lines: string[], metadataIndices: number[]) => {
+        const parseMetadata = (
+          lines: string[],
+          metadataIndices: number[]
+        ) => {
           if (metadataIndices.length > 0) {
             let metadata = lines.slice(
               metadataIndices[0] + 1,
@@ -75,13 +78,13 @@ let programs_data: program[] = [];
 
           let post: program = {
             id: timestamp,
-            date: metadata.date ? metadata.date : null,
-            title: metadata.title ? metadata.title : null,
+            date: metadata.date,
+            title: metadata.title,
             path: file.replace(".md", ""),
-            category: metadata.category ? metadata.category : null,
-            download: metadata.download ? metadata.download : null,
-            icon: metadata.icon ? metadata.icon : null,
-            content: content ? content : null,
+            category: metadata.category,
+            download: metadata.download,
+            icon: metadata.icon,
+            content: content,
           };
 
           // Add data to array
