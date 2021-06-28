@@ -34,14 +34,14 @@ const Card = styled.button`
   border: solid 2px transparent;
   border-radius: 4px;
   padding: 15px 10px;
-  background: ${({ theme }) => theme.background};
+  background: #2d2e30; 
   transition: border, box-shadow 0.3s ease;
   outline: none;
   cursor: pointer;
 
   &:hover {
-    border: solid 2px ${PRIMARY_COLOR};
-    box-shadow: 4px 4px 0 ${PRIMARY_COLOR};
+    border: solid 2px #61afef; 
+    box-shadow: 4px 4px 0 #61afef;
   }
 
   &:focus {

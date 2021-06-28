@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import {
-  PRIMARY_COLOR,
   SECONDARY_COLOR,
   WHITE_COLOR,
 } from "../../styles/colors";
@@ -11,7 +10,6 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
-  background: ${PRIMARY_COLOR};
 `;
 
 export const ContainerCenter = styled.div`
@@ -31,8 +29,8 @@ export const ContainerCenter = styled.div`
 export const Logo = styled.h1`
   font-size: 25px;
   font-weight: 700;
-  border-bottom: 4px solid ${WHITE_COLOR};
-  color: ${WHITE_COLOR};
+  border-bottom: 4px solid #61afef;
+  color: #fff;
   cursor: pointer;
 `;
 
