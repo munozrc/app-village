@@ -1,6 +1,5 @@
 // Components
 import SimpleContainer from "../SimpleContainer";
-import ButtonSquare from "../../components/ButtonSquare";
 import {
   ButtonLink,
   Container,
@@ -9,15 +8,13 @@ import {
 } from "./NavigationElements";
 
 // Assets
-import { IoSearch } from "react-icons/io5";
-import { ImSun } from "react-icons/im";
+import ProgramIcon from "../../assets/ProgramIcon";
+import FileIcon from "../../assets/FileIcon";
+import GameIcon from "../../assets/GameIcon";
+
 import { useHistory } from "react-router";
 
-type Props = {
-  toggleTheme: (event: React.MouseEvent<HTMLButtonElement>) => void;
-};
-
-export default function Navigation({ toggleTheme }: Props) {
+export default function Navigation() {
   const history = useHistory();
   const handleHome = (): void => {
     history.push({ pathname: "/" });
@@ -27,18 +24,10 @@ export default function Navigation({ toggleTheme }: Props) {
     <Container>
       <ContainerCenter>
         <Logo onClick={handleHome}>SOFTLINK</Logo>
-        <SimpleContainer>
-          <ButtonLink>Programas</ButtonLink>
-          <ButtonLink>Archivos</ButtonLink>
-          <ButtonLink>Juegos</ButtonLink>
-        </SimpleContainer>
-        <SimpleContainer gap={"5px"}>
-          <ButtonSquare>
-            <IoSearch size={"22px"} />
-          </ButtonSquare>
-          <ButtonSquare onClick={toggleTheme}>
-            <ImSun size={"22px"} />
-          </ButtonSquare>
+        <SimpleContainer gap="12px">
+          <ButtonLink to="/programs"><ProgramIcon /> Programas</ButtonLink>
+          <ButtonLink to="/files"><FileIcon /> Archivos</ButtonLink>
+          <ButtonLink to="/games"><GameIcon /> Juegos</ButtonLink>
         </SimpleContainer>
       </ContainerCenter>
     </Container>

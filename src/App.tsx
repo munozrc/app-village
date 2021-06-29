@@ -14,13 +14,13 @@ import HomePage from "./pages/HomePage";
 import ProgramPage from "./pages/ProgramPage";
 
 export default function App() {
-  const { theme, toggleTheme } = useTheme();
+  const { theme }= useTheme();
   const themeMode = theme === "light" ? lightTheme : darkTheme;
   return (
     <ThemeProvider theme={themeMode}>
       <Router>
         <GlobalStyles />
-        <Navigation toggleTheme={toggleTheme} />
+        <Navigation />
         <Route exact path={"/"} component={HomePage} />
         <Route exact path={"/programa/:path"} component={ProgramPage} />
       </Router>

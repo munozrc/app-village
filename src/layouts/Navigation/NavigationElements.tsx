@@ -1,12 +1,9 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
-import {
-  SECONDARY_COLOR,
-  WHITE_COLOR,
-} from "../../styles/colors";
 
 export const Container = styled.div`
   width: 100vw;
-  height: 80px;
+  height: 120px;
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
@@ -15,7 +12,7 @@ export const Container = styled.div`
 export const ContainerCenter = styled.div`
   width: 100%;
   height: 100%;
-  padding: 0 30px;
+  padding: 0px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,26 +31,28 @@ export const Logo = styled.h1`
   cursor: pointer;
 `;
 
-export const ButtonLink = styled.button`
-  background: transparent;
-  height: 41px;
-  padding: 10px 20px;
-  border: none;
-  color: ${WHITE_COLOR};
-  font-size: 1em;
+export const ButtonLink = styled(Link)`
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
+  color: #fff;
+  background: #2d2d2d;
+  font-size: 18px;
   font-weight: normal;
-  border-radius: 4px;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: opacity 0.3s ease;
   cursor: pointer;
-  transition: all 0.3s ease;
-  outline: none;
 
   &:hover {
-    background: ${WHITE_COLOR};
-    color: ${SECONDARY_COLOR};
+    opacity: 0.8;
   }
 
-  &:focus {
-    box-shadow: 0px 0px 0px 3px ${WHITE_COLOR};
+  & > svg {
+    fill: #fff;
+    font-size: 22px;
+    margin-right: 10px;
   }
 
   @media (max-width: 780px) {
