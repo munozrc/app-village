@@ -10,20 +10,19 @@ type Props = {
 export default function ButtonLink(props: Props) {
   return (
     <Button to={props.to}>
-      {props.icon} {props.content}
+      {props.icon} <Text>{props.content}</Text>
     </Button>
   );
 }
 
 const Button = styled(Link)`
   height: 50px;
+  line-height: 50px;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 0px 20px;
-  color: #fff;
   background: #2d2d2d;
-  font-size: 18px;
-  font-weight: normal;
   text-decoration: none;
   border-radius: 50px;
   transition: opacity 0.3s ease;
@@ -35,11 +34,19 @@ const Button = styled(Link)`
 
   & > svg {
     fill: #fff;
-    font-size: 22px;
-    margin-right: 10px;
+    font-size: 20px;
+    margin-right: 8px;
   }
 
   @media (max-width: 780px) {
     display: none;
   }
 `;
+
+const Text = styled.p`
+  display: block;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 400;
+  padding-bottom: 3px;
+`
