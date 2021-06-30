@@ -1,10 +1,10 @@
-import LastAdded from "../components/LastAdded";
 import ParentContainer from "../layouts/ParentContainer";
+import PopularPrograms from "../components/PopularPrograms";
 
 export default function HomePage() {
   return (
     <ParentContainer>
-      <LastAdded />
+      <PopularPrograms />
     </ParentContainer>
   );
 }
