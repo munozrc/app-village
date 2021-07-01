@@ -17,12 +17,11 @@ export default function ButtonLink(props: Props) {
 
 const Button = styled(Link)`
   height: 50px;
-  line-height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0px 20px;
-  background: #2d2d2d;
+  background: ${({ theme }) => theme.cardColor};
   text-decoration: none;
   border-radius: 50px;
   transition: opacity 0.3s ease;
@@ -34,11 +33,11 @@ const Button = styled(Link)`
   }
 
   &:focus {
-    box-shadow: 0px 0px 0px 1px #fff;
+    box-shadow: 0px 0px 0px 1px ${({ theme }) => theme.textColor};
   }
 
   & > svg {
-    fill: #fff;
+    fill: ${({ theme }) => theme.textColor};
     font-size: 20px;
     margin-right: 8px;
   }
@@ -52,7 +51,7 @@ const Text = styled.p`
   display: block;
   font-weight: 400;
   font-size: 20px;
-  color: #fff;
+  color: ${({ theme }) => theme.textColor};
   padding-bottom: 3px;
   line-height: 20px;
 `;
