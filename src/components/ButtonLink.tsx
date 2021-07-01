@@ -27,9 +27,14 @@ const Button = styled(Link)`
   border-radius: 50px;
   transition: opacity 0.3s ease;
   cursor: pointer;
+  outline: none;
 
   &:hover {
     opacity: 0.8;
+  }
+
+  &:focus {
+    box-shadow: 0px 0px 0px 1px #fff;
   }
 
   & > svg {
@@ -45,8 +50,9 @@ const Button = styled(Link)`
 
 const Text = styled.p`
   display: block;
+  font-weight: 400;
   font-size: 20px;
   color: #fff;
-  font-weight: 400;
   padding-bottom: 3px;
-`
+  line-height: 20px;
+`;
