@@ -10,5 +10,5 @@ export type program = {
   name: string;
   path: string;
   date: string;
-  versions: versionProgram[];
+  versions?: versionProgram[];
 };
