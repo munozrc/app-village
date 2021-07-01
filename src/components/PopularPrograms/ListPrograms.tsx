@@ -39,7 +39,7 @@ const ItemList = styled.li`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #2d2e30;
+  background: ${({ theme }) => theme.cardColor};
   padding: 20px;
   border-radius: 10px;
   transition: opacity 0.3s ease;
@@ -60,7 +60,7 @@ const Icon = styled.img`
 const TitleProgram = styled.h3`
   padding-top: 20px;
   font-size: 18px;
-  color: #fff;
+  color: ${({ theme }) => theme.textColor};
 `;
 
 const MoreInfo = styled.span`
