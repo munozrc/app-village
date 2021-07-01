@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import ArrowIcon from "../../assets/ArrowIcon";
 
 export default function ListPrograms() {
   return (
@@ -6,7 +7,11 @@ export default function ListPrograms() {
       <ItemList>
         <Icon src="https://winstall.app/assets/apps/spotify.webp" />
         <TitleProgram>Spotify</TitleProgram>
-        <MoreInfo>Más Información</MoreInfo>
+        <MoreInfo>
+          <ArrowIcon />
+          Más Información
+          <ArrowIcon />
+        </MoreInfo>
       </ItemList>
       <ItemList>
         <Icon src="https://winstall.app/assets/apps/notion.webp" />
@@ -39,6 +44,7 @@ const ItemList = styled.li`
   border-radius: 10px;
   transition: opacity 0.3s ease;
   cursor: pointer;
+  user-select: none;
 
   &:hover {
     opacity: 0.8;
@@ -59,9 +65,29 @@ const TitleProgram = styled.h3`
 
 const MoreInfo = styled.span`
   display: flex;
-  align-self: center;
   justify-content: center;
   font-size: 15px;
+  line-height: 15px;
   opacity: 0.7;
   padding-top: 10px;
+
+  & > svg {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    align-self: center;
+    opacity: 0;
+  }
+
+  & > svg:nth-child(1) {
+    transform: rotate(180deg);
+  }
+
+  &:hover > svg:nth-child(1) {
+    transform: translateX(-5px) rotate(180deg);
+    opacity: 0.7;
+  }
+
+  &:hover > svg:nth-child(2) {
+    transform: translateX(5px);
+    opacity: 0.7;
+  }
 `;
