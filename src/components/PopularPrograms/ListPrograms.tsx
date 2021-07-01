@@ -67,7 +67,6 @@ const MoreInfo = styled.span`
   display: flex;
   justify-content: center;
   font-size: 15px;
-  line-height: 15px;
   opacity: 0.7;
   padding-top: 10px;
 
