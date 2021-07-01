@@ -10,6 +10,5 @@ export type program = {
   name: string;
   path: string;
   date: string;
-  iconName: string;
   versions: versionProgram[];
 };
