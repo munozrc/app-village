@@ -1,8 +1,8 @@
 export type versionProgram = {
   id: number;
-  versionName: string;
+  name: string;
   installer: string;
-  instructions: string;
+  content: string;
 };
 
 export type program = {
