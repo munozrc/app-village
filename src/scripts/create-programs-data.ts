@@ -99,7 +99,9 @@ function readDirByProgram(dirPath: string) {
         if (!files.some((file) => file === "info.md"))
           reject(new Error(`    [-] Not found info.md`));
         // Create arrays files with content versions
-        fileVersions = files.filter((file) => file !== "info.md");
+        fileVersions = files
+          .filter((file) => file !== "info.md")
+          .filter((file) => path.extname(file).toLowerCase() === ".md");
         // read info file
         return readFileInfo(dirPath);
       })
