@@ -1,23 +1,23 @@
 import styled from "styled-components";
 import ArrowIcon from "../../assets/ArrowIcon";
+import Programs from "../../data/programs.json";
+import { program } from "../../types";
 
 export default function ListPrograms() {
+  const list: program[] = Programs.slice(0, 4);
   return (
     <List>
-      <ItemList>
-        <Icon src="https://winstall.app/assets/apps/spotify.webp" />
-        <TitleProgram>Spotify</TitleProgram>
-        <MoreInfo>
-          <ArrowIcon />
-          Más Información
-          <ArrowIcon />
-        </MoreInfo>
-      </ItemList>
-      <ItemList>
-        <Icon src="https://winstall.app/assets/apps/notion.webp" />
-        <TitleProgram>Notion</TitleProgram>
-        <MoreInfo>Más Información</MoreInfo>
-      </ItemList>
+      {list.map((program) => (
+        <ItemList>
+          <Icon src="https://winstall.app/assets/apps/spotify.webp" />
+          <TitleProgram>{program.name}</TitleProgram>
+          <MoreInfo>
+            <ArrowIcon />
+            Más Información
+            <ArrowIcon />
+          </MoreInfo>
+        </ItemList>
+      ))}
     </List>
   );
 }
