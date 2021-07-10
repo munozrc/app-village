@@ -9,7 +9,7 @@ export default function ListPrograms() {
     <List>
       {list.map((program) => (
         <ItemList>
-          <Icon src="https://winstall.app/assets/apps/spotify.webp" />
+          <Icon src={program.icon} />
           <TitleProgram>{program.name}</TitleProgram>
           <MoreInfo>
             <ArrowIcon />
