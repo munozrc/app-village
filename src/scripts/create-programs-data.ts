@@ -53,6 +53,7 @@ function readFileInfo(dirPath: string): Promise<program> {
           name: metadata.name,
           path: metadata.path,
           date: metadata.date,
+          icon: metadata.icon,
         });
       })
       .catch(() => reject(new Error(`    [-] Failed to read info.md`)));
