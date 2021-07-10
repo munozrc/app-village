@@ -1,14 +1,23 @@
 import styled from "styled-components";
-import ArrowIcon from "../../assets/ArrowIcon";
-import Programs from "../../data/programs.json";
+import { useHistory } from "react-router";
 import { program } from "../../types";
 
+// Assets
+import ArrowIcon from "../../assets/ArrowIcon";
+
+// Data
+import Programs from "../../data/programs.json";
+
 export default function ListPrograms() {
+  const history = useHistory();
   const list: program[] = Programs.slice(0, 4);
   return (
     <List>
       {list.map((program) => (
-        <ItemList>
+        <ItemList
+          key={`program-${program.id}`}
+          onClick={() => history.push(`/programs/${program.path}`)}
+        >
           <Icon src={program.icon} />
           <TitleProgram>{program.name}</TitleProgram>
           <MoreInfo>

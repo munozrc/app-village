@@ -1,4 +1,4 @@
-import { HashRouter as Router, Route } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./styles/global";
 import { defaultTheme } from "./styles/theme";
@@ -16,8 +16,10 @@ export default function App() {
       <Router>
         <GlobalStyles />
         <Navigation />
-        <Route exact path={"/"} component={HomePage} />
-        <Route exact path={"/programa/:path"} component={ProgramPage} />
+        <Switch>
+          <Route path={"/programs/:path"} component={ProgramPage} />
+          <Route path={"/"} component={HomePage} />
+        </Switch>
       </Router>
     </ThemeProvider>
   );
