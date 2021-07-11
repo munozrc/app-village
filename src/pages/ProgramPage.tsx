@@ -15,6 +15,7 @@ import SystemIcon from "../assets/SystemIcon";
 import StorageIcon from "../assets/StorageIcon";
 import LanguageIcon from "../assets/LanguageIcon";
 import LinkIcon from "../assets/LinkIcon";
+import ReactMarkdown from "react-markdown";
 
 interface RouteParams {
   id: string;
@@ -56,6 +57,9 @@ export default function ProgramPage() {
           </>
         )}
       </WrapperHeader>
+      {typeof data.versions !== "undefined" && (
+        <ReactMarkdown children={data.versions[0].content} />
+      )}
     </ParentContainer>
   );
 }
