@@ -5,11 +5,15 @@
     "path": "adobe-photoshop",
     "date": "May 15, 2021 20:00:00",
     "icon": "https://windows-cdn.softpedia.com/screenshots/Adobe-PhotoShop-Update_1.png",
+    "dev": "Adobe Inc.",
     "versions": [
       {
         "id": 0,
         "name": "Versión CS6",
         "installer": "www.google.com",
+        "os": "Windows (32/64-bits)",
+        "size": "1.2GB",
+        "language": "Español",
         "content": "\n# Instrucciones de instalación\n\n- Descargar el instalador\n- Ejecutar como administrador\n"
       }
     ]
@@ -20,11 +24,15 @@
     "path": "clip-studio-paint",
     "date": "July 02, 2021 18:00:00",
     "icon": "https://dl2.macupdate.com/images/icons256/32454.png?d=1513368213",
+    "dev": "Celsys",
     "versions": [
       {
         "id": 0,
-        "name": "Clip Studio Paint 1.10.6",
+        "name": "Versión 1.10.6",
         "installer": "www.google.com",
+        "os": "Windows (32/64-bits)",
+        "size": "1.2GB",
+        "language": "Multilenguaje",
         "content": "\n# Instrucciones de instalación\n\n- Descargar el instalador\n- Ejecutar como administrador\n"
       }
     ]
@@ -35,11 +43,15 @@
     "path": "microsoft-office",
     "date": "May 15, 2021 18:00:00",
     "icon": "https://linkscrack.com/wp-content/uploads/2020/09/Microsoft-Office-Crack.png",
+    "dev": "Microsoft",
     "versions": [
       {
         "id": 0,
-        "name": "Microsoft Office 2013",
+        "name": "Versión 2013",
         "installer": "www.google.com",
+        "os": "Windows (32/64-bits)",
+        "size": "600MB",
+        "language": "Español",
         "content": "\n# Instrucciones de instalación\n\n- Descargar el instalador\n- Ejecutar como administrador\n"
       }
     ]
@@ -50,11 +62,15 @@
     "path": "serva-community",
     "date": "May 20, 2021 18:00:00",
     "icon": "https://www.vercot.com/~serva/Imgs/icon%20Serva%20128grey.png",
+    "dev": "Vercot LLC",
     "versions": [
       {
         "id": 0,
-        "name": "Serva Community v4.4.0",
+        "name": "Versión 4.4.0",
         "installer": "www.google.com",
+        "os": "Windows (32/64-bits)",
+        "size": "1.2GB",
+        "language": "Inglés",
         "content": "\n# Instrucciones de instalación\n\n- Descargar el instalador\n- Ejecutar como administrador\n"
       }
     ]
