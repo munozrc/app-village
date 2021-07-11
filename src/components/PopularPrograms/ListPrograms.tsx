@@ -16,7 +16,7 @@ export default function ListPrograms() {
       {list.map((program) => (
         <ItemList
           key={`program-${program.id}`}
-          onClick={() => history.push(`/programs/${program.path}`)}
+          onClick={() => history.push(`/programs/${program.id}`)}
         >
           <Icon src={program.icon} />
           <TitleProgram>{program.name}</TitleProgram>

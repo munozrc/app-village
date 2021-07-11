@@ -1,1 +1,63 @@
-[{"id":1621126800,"name":"Adobe Photoshop","path":"adobe-photoshop","date":"May 15, 2021 20:00:00","icon":"https://windows-cdn.softpedia.com/screenshots/Adobe-PhotoShop-Update_1.png","versions":[{"id":0,"name":"Adobe Photoshop CS6","installer":"www.google.com","content":"\n# Instrucciones de instalación\n\n- Descargar el instalador\n- Ejecutar como administrador\n"}]},{"id":1625266800,"name":"Clip Studio Paint","path":"clip-studio-paint","date":"July 02, 2021 18:00:00","icon":"https://dl2.macupdate.com/images/icons256/32454.png?d=1513368213","versions":[{"id":0,"name":"Clip Studio Paint 1.10.6","installer":"www.google.com","content":"\n# Instrucciones de instalación\n\n- Descargar el instalador\n- Ejecutar como administrador\n"}]},{"id":1621119600,"name":"Microsoft Office","path":"microsoft-office","date":"May 15, 2021 18:00:00","icon":"https://linkscrack.com/wp-content/uploads/2020/09/Microsoft-Office-Crack.png","versions":[{"id":0,"name":"Microsoft Office 2013","installer":"www.google.com","content":"\n# Instrucciones de instalación\n\n- Descargar el instalador\n- Ejecutar como administrador\n"}]},{"id":1621551600,"name":"Serva Community","path":"serva-community","date":"May 20, 2021 18:00:00","icon":"https://www.vercot.com/~serva/Imgs/icon%20Serva%20128grey.png","versions":[{"id":0,"name":"Serva Community v4.4.0","installer":"www.google.com","content":"\n# Instrucciones de instalación\n\n- Descargar el instalador\n- Ejecutar como administrador\n"}]}]
+[
+  {
+    "id": 1621126800,
+    "name": "Adobe Photoshop",
+    "path": "adobe-photoshop",
+    "date": "May 15, 2021 20:00:00",
+    "icon": "https://windows-cdn.softpedia.com/screenshots/Adobe-PhotoShop-Update_1.png",
+    "versions": [
+      {
+        "id": 0,
+        "name": "Versión CS6",
+        "installer": "www.google.com",
+        "content": "\n# Instrucciones de instalación\n\n- Descargar el instalador\n- Ejecutar como administrador\n"
+      }
+    ]
+  },
+  {
+    "id": 1625266800,
+    "name": "Clip Studio Paint",
+    "path": "clip-studio-paint",
+    "date": "July 02, 2021 18:00:00",
+    "icon": "https://dl2.macupdate.com/images/icons256/32454.png?d=1513368213",
+    "versions": [
+      {
+        "id": 0,
+        "name": "Clip Studio Paint 1.10.6",
+        "installer": "www.google.com",
+        "content": "\n# Instrucciones de instalación\n\n- Descargar el instalador\n- Ejecutar como administrador\n"
+      }
+    ]
+  },
+  {
+    "id": 1621119600,
+    "name": "Microsoft Office",
+    "path": "microsoft-office",
+    "date": "May 15, 2021 18:00:00",
+    "icon": "https://linkscrack.com/wp-content/uploads/2020/09/Microsoft-Office-Crack.png",
+    "versions": [
+      {
+        "id": 0,
+        "name": "Microsoft Office 2013",
+        "installer": "www.google.com",
+        "content": "\n# Instrucciones de instalación\n\n- Descargar el instalador\n- Ejecutar como administrador\n"
+      }
+    ]
+  },
+  {
+    "id": 1621551600,
+    "name": "Serva Community",
+    "path": "serva-community",
+    "date": "May 20, 2021 18:00:00",
+    "icon": "https://www.vercot.com/~serva/Imgs/icon%20Serva%20128grey.png",
+    "versions": [
+      {
+        "id": 0,
+        "name": "Serva Community v4.4.0",
+        "installer": "www.google.com",
+        "content": "\n# Instrucciones de instalación\n\n- Descargar el instalador\n- Ejecutar como administrador\n"
+      }
+    ]
+  }
+]
+

@@ -17,7 +17,7 @@ export default function App() {
         <GlobalStyles />
         <Navigation />
         <Switch>
-          <Route path={"/programs/:path"} component={ProgramPage} />
+          <Route path={"/programs/:id"} component={ProgramPage} />
           <Route path={"/"} component={HomePage} />
         </Switch>
       </Router>
