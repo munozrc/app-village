@@ -7,8 +7,13 @@ import ParentContainer from "../layouts/ParentContainer";
 
 // Data
 import Programs from "../data/programs.json";
+
+// Assets
 import DownloadIcon from "../assets/DownloadIcon";
 import PackageIcon from "../assets/PackageIcon";
+import SystemIcon from "../assets/SystemIcon";
+import StorageIcon from "../assets/StorageIcon";
+import LanguageIcon from "../assets/LanguageIcon";
 
 interface RouteParams {
   id: string;
@@ -30,10 +35,25 @@ export default function ProgramPage() {
             <DownloadIcon />
           </BtnDownload>
         </Box>
-        <ItemPropertie>
-          <PackageIcon />{" "}
-          {typeof data.versions !== "undefined" && data.versions[0].name}
-        </ItemPropertie>
+        {typeof data.versions !== "undefined" && (
+          <>
+            <ItemPropertie>
+              <PackageIcon /> {data.versions[0].name}
+            </ItemPropertie>
+            <ItemPropertie>
+              <SystemIcon /> {data.versions[0].os}
+            </ItemPropertie>
+            <ItemPropertie>
+              <StorageIcon /> {data.versions[0].size}
+            </ItemPropertie>
+            <ItemPropertie>
+              <LanguageIcon /> {data.versions[0].language}
+            </ItemPropertie>
+            <ItemPropertie>
+              <PackageIcon /> {data.dev}
+            </ItemPropertie>
+          </>
+        )}
       </WrapperHeader>
     </ParentContainer>
   );
@@ -100,10 +120,15 @@ const ItemPropertie = styled.div`
   align-items: center;
   opacity: 0.8;
   font-size: 16px;
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
 
   & > svg {
     font-size: 20px;
     stroke: ${({ theme }) => theme.textColor};
-    margin-right: 5px;
+    margin-right: 8px;
   }
 `;
