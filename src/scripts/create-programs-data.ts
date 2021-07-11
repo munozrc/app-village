@@ -54,6 +54,7 @@ function readFileInfo(dirPath: string): Promise<program> {
           path: metadata.path,
           date: metadata.date,
           icon: metadata.icon,
+          dev: metadata.dev,
         });
       })
       .catch(() => reject(new Error(`    [-] Failed to read info.md`)));
@@ -80,6 +81,9 @@ function readFileVersion(filePath: string): Promise<versionProgram> {
           id: parseInt(metadata.id),
           name: metadata.name,
           installer: metadata.installer,
+          os: metadata.os,
+          size: metadata.size,
+          language: metadata.language,
           content: content,
         });
       })
