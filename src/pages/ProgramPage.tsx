@@ -71,6 +71,7 @@ const WrapperHeader = styled.div`
   background: ${({ theme }) => theme.cardColor};
   border-radius: 10px;
   padding: 20px;
+  margin-bottom: 20px;
 `;
 const Box = styled.div`
   width: 100%;
