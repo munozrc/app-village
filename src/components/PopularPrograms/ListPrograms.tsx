@@ -68,14 +68,14 @@ const Icon = styled.img`
 
 const TitleProgram = styled.h3`
   padding-top: 20px;
-  font-size: 18px;
+  font-size: 16px;
   color: ${({ theme }) => theme.textColor};
 `;
 
 const MoreInfo = styled.span`
   display: flex;
   justify-content: center;
-  font-size: 15px;
+  font-size: 14px;
   opacity: 0.7;
   padding-top: 10px;
 
