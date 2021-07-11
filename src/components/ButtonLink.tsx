@@ -50,8 +50,6 @@ const Button = styled(Link)`
 const Text = styled.p`
   display: block;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
   color: ${({ theme }) => theme.textColor};
-  padding-bottom: 3px;
-  line-height: 20px;
 `;
