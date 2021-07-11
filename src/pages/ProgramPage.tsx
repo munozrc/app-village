@@ -14,6 +14,7 @@ import PackageIcon from "../assets/PackageIcon";
 import SystemIcon from "../assets/SystemIcon";
 import StorageIcon from "../assets/StorageIcon";
 import LanguageIcon from "../assets/LanguageIcon";
+import LinkIcon from "../assets/LinkIcon";
 
 interface RouteParams {
   id: string;
@@ -50,7 +51,7 @@ export default function ProgramPage() {
               <LanguageIcon /> {data.versions[0].language}
             </ItemPropertie>
             <ItemPropertie>
-              <PackageIcon /> {data.dev}
+              <LinkIcon /> Otros programas de {data.dev}
             </ItemPropertie>
           </>
         )}
