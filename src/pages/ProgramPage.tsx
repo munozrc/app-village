@@ -1,6 +1,7 @@
 import { useParams } from "react-router";
 import { program } from "../types";
 import styled from "styled-components";
+import ReactMarkdown from "react-markdown";
 
 // Custom Components
 import ParentContainer from "../layouts/ParentContainer";
@@ -15,7 +16,6 @@ import SystemIcon from "../assets/SystemIcon";
 import StorageIcon from "../assets/StorageIcon";
 import LanguageIcon from "../assets/LanguageIcon";
 import LinkIcon from "../assets/LinkIcon";
-import ReactMarkdown from "react-markdown";
 
 interface RouteParams {
   id: string;
@@ -25,7 +25,10 @@ export default function ProgramPage() {
   const { id } = useParams<RouteParams>();
   const data: program | null =
     Programs.find((item) => item.id === parseInt(id)) || null;
-
+  const handleDownload = () => {
+    if (data && typeof data.versions !== "undefined")
+      window.open(data.versions[0].installer, "_blank");
+  };
   if (!data) return <div>Not Found</div>;
   return (
     <ParentContainer>
@@ -33,7 +36,7 @@ export default function ProgramPage() {
         <Box>
           <IconBox src={data.icon} />
           <NameProgram>{data.name}</NameProgram>
-          <BtnDownload>
+          <BtnDownload onClick={handleDownload}>
             <DownloadIcon />
           </BtnDownload>
         </Box>
