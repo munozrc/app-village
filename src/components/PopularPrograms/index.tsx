@@ -7,7 +7,7 @@ export default function PopularPrograms() {
     <ContainerBox>
       <TitleBox />
       <Description>
-        Estos son algunos de los programas mas esenciales para dispositivos
+        Estos son algunos de los programas más esenciales para dispositivos
         nuevos con Windows.
       </Description>
       <ListPrograms />
