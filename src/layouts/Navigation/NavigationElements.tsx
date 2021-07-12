@@ -25,8 +25,8 @@ export const ContainerCenter = styled.div`
 export const Logo = styled(Link)`
   font-size: 28px;
   font-weight: 700;
-  border-bottom: 4px solid #61afef;
-  text-decoration: underline #61afef;
+  border-bottom: 5px solid #61afef;
+  text-decoration: none;
   color: #fff;
   cursor: pointer;
 `;
