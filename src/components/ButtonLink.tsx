@@ -37,6 +37,7 @@ const Button = styled(Link)`
   }
 
   & > svg {
+    stroke: ${({ theme }) => theme.textColor};
     fill: ${({ theme }) => theme.textColor};
     font-size: 20px;
     margin-right: 8px;
