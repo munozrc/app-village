@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import GridIcon from "../../assets/GridIcon";
 
 export default function TitleBox() {
   return (
     <Box>
-      <Title>Programas Populares</Title>
-      <ViewAll to="/popular-programs">Ver Todos</ViewAll>
+      <Title>Más Populares</Title>
+      <ViewAll to="/popular-programs">
+        <GridIcon />
+        Ver Todos
+      </ViewAll>
     </Box>
   );
 }
@@ -14,7 +18,6 @@ const Box = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 10px;
 `;
 
 const Title = styled.h2`
@@ -23,14 +26,18 @@ const Title = styled.h2`
 `;
 
 const ViewAll = styled(Link)`
-  height: 25px;
+  height: 28px;
   display: flex;
   align-items: center;
   text-decoration: none;
   background: #2d2d2d;
   color: #fff;
   border-radius: 50px;
-  font-size: 15px;
-  padding: 5px 15px;
+  font-size: 16px;
+  padding: 0px 15px;
   cursor: pointer;
+
+  svg {
+    margin-right: 6px;
+  }
 `;
