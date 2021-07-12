@@ -1,10 +1,10 @@
 import { useParams } from "react-router";
 import { program } from "../types";
 import styled from "styled-components";
-import ReactMarkdown from "react-markdown";
 
 // Custom Components
 import ParentContainer from "../layouts/ParentContainer";
+import MarkdownContainer from "../layouts/MarkdownContainer";
 
 // Data
 import Programs from "../data/programs.json";
@@ -61,7 +61,7 @@ export default function ProgramPage() {
         )}
       </WrapperHeader>
       {typeof data.versions !== "undefined" && (
-        <ReactMarkdown children={data.versions[0].content} />
+        <MarkdownContainer children={data.versions[0].content} />
       )}
     </ParentContainer>
   );
