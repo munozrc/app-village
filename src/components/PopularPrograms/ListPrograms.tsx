@@ -10,7 +10,7 @@ import Programs from "../../data/programs.json";
 
 export default function ListPrograms() {
   const history = useHistory();
-  const list: program[] = Programs.slice(0, 4);
+  const list: program[] = Programs.slice(0, 6);
   return (
     <List>
       {list.map((program) => (
