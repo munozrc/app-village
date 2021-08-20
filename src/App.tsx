@@ -7,8 +7,8 @@ import { defaultTheme } from "./styles/theme";
 import Navigation from "./layouts/Navigation";
 
 // Pages
-import HomePage from "./pages/HomePage";
 import ProgramPage from "./pages/ProgramPage";
+import Home from "./pages/Home";
 
 export default function App() {
   return (
@@ -18,7 +18,7 @@ export default function App() {
         <Navigation />
         <Switch>
           <Route path={"/programs/:id"} component={ProgramPage} />
-          <Route path={"/"} component={HomePage} />
+          <Route path={"/"} component={Home} />
         </Switch>
       </Router>
     </ThemeProvider>
