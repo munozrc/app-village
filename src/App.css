@@ -1,0 +1,12 @@
+.parent-container {
+  width: 100vw;
+  max-width: 1200px;
+  padding: 0 50px 50px 50px;
+  margin: 0 auto;
+}
+
+@media (max-width: 500px) {
+  .parent-container {
+    padding: 0px 20px 20px 20px;
+  }
+}

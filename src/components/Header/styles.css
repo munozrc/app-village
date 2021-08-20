@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+}
+
+.header__logo {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.header__logo h1 {
+  color: #fff;
+  border-bottom: 5px solid #61afef;
+}
+
+@media (max-width: 500px) {
+  .header {
+    height: 100px;
+  }
+
+  .header__logo h1 {
+    font-size: 28px;
+  }
+}

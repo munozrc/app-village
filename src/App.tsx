@@ -2,23 +2,25 @@ import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { defaultTheme } from "./styles/theme";
 
-// Components
-import Navigation from "./layouts/Navigation";
+import Header from "./components/Header";
 
-// Pages
 import ProgramPage from "./pages/ProgramPage";
 import Home from "./pages/Home";
+
+import "./App.css";
 
 export default function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
-      <Router>
-        <Navigation />
-        <Switch>
-          <Route path={"/programs/:id"} component={ProgramPage} />
-          <Route path={"/"} component={Home} />
-        </Switch>
-      </Router>
+      <main className="parent-container">
+        <Router>
+          <Header />
+          <Switch>
+            <Route path={"/programs/:id"} component={ProgramPage} />
+            <Route path={"/"} component={Home} />
+          </Switch>
+        </Router>
+      </main>
     </ThemeProvider>
   );
 }
