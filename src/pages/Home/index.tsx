@@ -23,7 +23,11 @@ function Home() {
         </header>
         <div className="home__section-content">
           {list.map((ele) => (
-            <Link to={`/programs/${ele.id}`} className="home__section-item">
+            <Link
+              key={ele.id}
+              to={`/programs/${ele.id}`}
+              className="home__section-item"
+            >
               <img src={ele.icon} alt={ele.name} />
               <h3>{ele.name}</h3>
               <span>
