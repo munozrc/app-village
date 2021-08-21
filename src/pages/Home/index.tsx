@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
+import ArrowIcon from "../../assets/ArrowIcon";
+import Programs from "../../data/programs.json";
+import { program } from "../../types";
 import "./styles.css";
 
 function Home() {
+  const list: program[] = Programs.slice(0, 6);
   return (
     <div className="home">
       <section className="home__section">
@@ -17,7 +21,19 @@ function Home() {
             nuevos con Windows.
           </p>
         </header>
-        <div className="home__section-content"></div>
+        <div className="home__section-content">
+          {list.map((ele) => (
+            <Link to={`/programs/${ele.id}`} className="home__section-item">
+              <img src={ele.icon} alt={ele.name} />
+              <h3>{ele.name}</h3>
+              <span>
+                <ArrowIcon />
+                Más Información
+                <ArrowIcon />
+              </span>
+            </Link>
+          ))}
+        </div>
       </section>
     </div>
   );
