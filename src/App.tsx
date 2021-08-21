@@ -4,8 +4,8 @@ import { defaultTheme } from "./styles/theme";
 
 import Header from "./components/Header";
 
-import ProgramPage from "./pages/ProgramPage";
 import Home from "./pages/Home";
+import SingleProgram from "./pages/SingleProgram";
 
 import "./App.css";
 
@@ -16,7 +16,7 @@ export default function App() {
         <Router>
           <Header />
           <Switch>
-            <Route path={"/programs/:id"} component={ProgramPage} />
+            <Route path={"/programs/:id"} component={SingleProgram} />
             <Route path={"/"} component={Home} />
           </Switch>
         </Router>
