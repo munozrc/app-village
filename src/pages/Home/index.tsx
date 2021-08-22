@@ -5,7 +5,7 @@ import { program } from "../../types";
 import "./styles.css";
 
 function Home() {
-  const list: program[] = Programs.slice(0, 6);
+  const list: program[] = Programs.slice(0, 4);
   return (
     <div className="home">
       <section className="home__section">
