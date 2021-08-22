@@ -2,12 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 120px;
-}
-
-.header__logo {
-  cursor: pointer;
-  text-decoration: none;
+  padding: 40px 0px;
 }
 
 .header__logo h1 {
@@ -17,7 +12,7 @@
 
 @media (max-width: 500px) {
   .header {
-    height: 100px;
+    padding: 30px 0px;
   }
 
   .header__logo h1 {
