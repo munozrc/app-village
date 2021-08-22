@@ -15,9 +15,8 @@
   user-select: none;
   padding: 20px;
   color: #fafafa;
-  background: #393d45;
+  background: #2b2e33;
   border-radius: 10px;
-  order: 2;
 }
 
 .single-program__header {
@@ -27,7 +26,7 @@
   width: 100%;
   padding-bottom: 20px;
   margin-bottom: 20px;
-  border-bottom: solid 2px rgba(255, 255, 255, 0.1);
+  border-bottom: solid 2px rgba(255, 255, 255, 0.15);
 }
 
 .single-program__icon {
@@ -73,11 +72,10 @@
 .single-program__content {
   width: 100%;
   padding: 20px;
-  margin-right: 20px;
+  margin-left: 20px;
   color: #fafafa;
   background: #2b2e33;
   border-radius: 10px;
-  order: 1;
 }
 
 @media (max-width: 700px) {
@@ -87,13 +85,11 @@
 
   .single-program__card {
     width: 100%;
-    order: 1;
   }
 
   .single-program__content {
     height: 100%;
     margin-top: 20px;
-    margin-right: 0px;
-    order: 2;
+    margin-left: 0px;
   }
 }
