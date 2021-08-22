@@ -52,12 +52,15 @@ function SingleProgram() {
           <h2 className="single-program__name">{currentProgram.name}</h2>
         </header>
         <div className="single-program__items-container">
-          <span className="single-program__item" onClick={handleDownload}>
+          <button className="single-program__item" onClick={handleDownload}>
             <DownloadIcon /> Descargar
-          </span>
-          <span className="single-program__item" onClick={handleChangeVersion}>
+          </button>
+          <button
+            className="single-program__item"
+            onClick={handleChangeVersion}
+          >
             <PackageIcon /> {currentProgram.versions[currentVersion].name}
-          </span>
+          </button>
           <span className="single-program__item">
             <SystemIcon /> {currentProgram.versions[currentVersion].os}
           </span>

@@ -57,6 +57,19 @@
   align-items: center;
   font-size: 16px;
   margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.single-program button {
+  transition: color 0.3s ease;
+}
+
+.single-program button:hover {
+  color: #61afef;
+}
+
+.single-program button:hover > svg {
+  stroke: #61afef;
 }
 
 .single-program__item:last-child {
@@ -67,6 +80,7 @@
   font-size: 20px;
   stroke: #fff;
   margin-right: 8px;
+  transition: stroke 0.3s ease;
 }
 
 .single-program__content {
