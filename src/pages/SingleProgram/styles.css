@@ -9,9 +9,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 30%;
+  width: 35%;
   height: fit-content;
-  min-width: 240px;
+  min-width: 260px;
   user-select: none;
   padding: 20px;
   color: #fafafa;
@@ -55,21 +55,26 @@
   width: 100%;
   display: flex;
   align-items: center;
+  padding: 10px 12px;
   font-size: 16px;
   margin-bottom: 10px;
+}
+
+button.single-program__item {
+  color: #1e2127;
+  background: #61afef;
+  border-radius: 4px;
+  transition: opacity 0.3s ease;
   line-height: 1.2;
+  opacity: 0.8;
 }
 
-.single-program button {
-  transition: color 0.3s ease;
+button.single-program__item > svg {
+  stroke: #1e2127;
 }
 
-.single-program button:hover {
-  color: #61afef;
-}
-
-.single-program button:hover > svg {
-  stroke: #61afef;
+button.single-program__item:hover {
+  opacity: 1;
 }
 
 .single-program__item:last-child {
@@ -80,7 +85,6 @@
   font-size: 20px;
   stroke: #fff;
   margin-right: 8px;
-  transition: stroke 0.3s ease;
 }
 
 .single-program__content {

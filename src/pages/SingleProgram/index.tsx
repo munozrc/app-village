@@ -55,12 +55,9 @@ function SingleProgram() {
           <button className="single-program__item" onClick={handleDownload}>
             <DownloadIcon /> Descargar
           </button>
-          <button
-            className="single-program__item"
-            onClick={handleChangeVersion}
-          >
+          <span className="single-program__item" onClick={handleChangeVersion}>
             <PackageIcon /> {currentProgram.versions[currentVersion].name}
-          </button>
+          </span>
           <span className="single-program__item">
             <SystemIcon /> {currentProgram.versions[currentVersion].os}
           </span>
