@@ -26,7 +26,7 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "create-programs-data": "npx ts-node --skip-project src/scripts/create-programs-data.ts"
+    "generate-programs-data": "npx ts-node --skip-project src/scripts/generate-programs-data.ts"
   },
   "eslintConfig": {
     "extends": [
