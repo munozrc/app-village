@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
 import ArrowIcon from "../../assets/ArrowIcon";
-import Programs from "../../data/programs.json";
-import { program } from "../../types";
+import programs from "../../data/programs.json";
+
 import "./styles.css";
 
 function Home() {
-  const list: program[] = Programs.slice(0, 4);
   return (
     <div className="home">
       <section className="home__section">
@@ -22,7 +21,7 @@ function Home() {
           </p>
         </header>
         <div className="home__section-content">
-          {list.map((ele) => (
+          {programs.slice(0, 4).map((ele) => (
             <Link
               key={ele.id}
               to={`/programs/${ele.id}`}

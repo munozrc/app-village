@@ -1,17 +1,17 @@
+import { useState } from "react";
 import { useParams } from "react-router";
-import { program } from "../../types";
-import programsData from "../../data/programs.json";
+import ReactMarkdown from "react-markdown";
 
 import PackageIcon from "../../assets/PackageIcon";
-
-import "./styles.css";
 import SystemIcon from "../../assets/SystemIcon";
 import StorageIcon from "../../assets/StorageIcon";
 import LanguageIcon from "../../assets/LanguageIcon";
 import LinkIcon from "../../assets/LinkIcon";
 import DownloadIcon from "../../assets/DownloadIcon";
-import ReactMarkdown from "react-markdown";
-import { useState } from "react";
+
+import programs from "../../data/programs.json";
+
+import "./styles.css";
 
 interface SingleProgramParams {
   id: string;
@@ -20,16 +20,15 @@ interface SingleProgramParams {
 function SingleProgram() {
   const { id } = useParams<SingleProgramParams>();
   const [currentVersion, setCurrentVersion] = useState<number>(0);
-  const currentProgram = getCurrentProgram(parseInt(id));
+  const currentProgram = programs.find((ele) => ele.id === parseInt(id));
 
   const handleDownload = () => {
-    if (!currentProgram || !currentProgram.versions) return;
+    if (!currentProgram) return;
     window.open(currentProgram.versions[currentVersion].installer, "_blank");
   };
 
   const handleChangeVersion = () => {
-    if (!currentProgram || !currentProgram.versions) return;
-
+    if (!currentProgram) return;
     const maxVersionSupport = currentProgram.versions.length - 1;
 
     if (maxVersionSupport < currentVersion) {
@@ -39,7 +38,8 @@ function SingleProgram() {
     }
   };
 
-  if (!currentProgram || !currentProgram.versions) return <h4>404</h4>;
+  if (!currentProgram) return <h4>404</h4>;
+
   return (
     <div className="single-program">
       <section className="single-program__card">
@@ -79,11 +79,6 @@ function SingleProgram() {
       </section>
     </div>
   );
-}
-
-function getCurrentProgram(id: number): program | null {
-  const program = programsData.find((ele) => ele.id === id);
-  return program || null;
 }
 
 export default SingleProgram;
