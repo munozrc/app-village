@@ -73,6 +73,7 @@ function SingleProgram() {
         </div>
       </section>
       <section className="single-program__content">
+        <ReactMarkdown children={currentProgram.description} />
         <ReactMarkdown
           children={currentProgram.versions[currentVersion].content}
         />
