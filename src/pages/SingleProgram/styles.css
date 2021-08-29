@@ -49,6 +49,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  gap: 5px;
 }
 
 .single-program__item {
@@ -57,7 +58,21 @@
   align-items: center;
   padding: 10px 12px;
   font-size: 16px;
-  margin-bottom: 10px;
+}
+
+.single-program__item > select {
+  width: 100%;
+  font-size: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.single-program__item > select > option {
+  background: #1e2127;
+  padding: 4px 0px;
 }
 
 button.single-program__item {
@@ -74,10 +89,6 @@ button.single-program__item > svg {
 
 button.single-program__item:hover {
   opacity: 0.8;
-}
-
-.single-program__item:last-child {
-  margin-bottom: 5px;
 }
 
 .single-program__item > svg {

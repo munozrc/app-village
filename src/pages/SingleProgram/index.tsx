@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 import { useParams } from "react-router";
 import ReactMarkdown from "react-markdown";
 
@@ -27,15 +27,9 @@ function SingleProgram() {
     window.open(currentProgram.versions[currentVersion].installer, "_blank");
   };
 
-  const handleChangeVersion = () => {
-    if (!currentProgram) return;
-    const maxVersionSupport = currentProgram.versions.length - 1;
-
-    if (maxVersionSupport < currentVersion) {
-      setCurrentVersion((prev) => prev + 1);
-    } else if (maxVersionSupport === currentVersion) {
-      setCurrentVersion(() => 0);
-    }
+  const handleOnChangeVersion = (event: ChangeEvent<HTMLSelectElement>) => {
+    const value = parseInt(event.target.value);
+    setCurrentVersion(() => value);
   };
 
   if (!currentProgram) return <h4>404</h4>;
@@ -55,8 +49,19 @@ function SingleProgram() {
           <button className="single-program__item" onClick={handleDownload}>
             <DownloadIcon /> Descargar
           </button>
-          <span className="single-program__item" onClick={handleChangeVersion}>
-            <PackageIcon /> {currentProgram.versions[currentVersion].name}
+          <span className="single-program__item">
+            <PackageIcon />
+            <select
+              name="versions"
+              value={currentVersion}
+              onChange={handleOnChangeVersion}
+            >
+              {currentProgram.versions.map(({ name }, index) => (
+                <option key={name} value={index}>
+                  {name}
+                </option>
+              ))}
+            </select>
           </span>
           <span className="single-program__item">
             <SystemIcon /> {currentProgram.versions[currentVersion].os}
