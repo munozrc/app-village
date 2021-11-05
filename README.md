@@ -7,7 +7,7 @@ Application created with ReactJS to manage links to programs.
 In the project directory, you can run:
 
 ```
-npm start
+npm run dev
 ```
 
 Deploy in `gh-pages`
