@@ -1,1 +1,92 @@
-[{"id":1626969600,"name":"Discord","date":"July 22, 2021 11:00:00","icon":"https://www.podfeet.com/blog/wp-content/uploads/2018/02/discord-logo.png","dev":"Discord Inc","description":"\r\nEs una aplicación de chat, similar a programas como Skype, TeamSpeak o plataformas de comunicación profesionales como Slack. Está dirigido específicamente a los gamers, brindándoles formas de reunirse, coordinar el juego y hablar mientras juegan. Admite videollamadas, y chat de voz y texto, lo que permite a los usuarios ponerse en contacto como les plazca.\r\n","versions":[{"name":"Última Versión","installer":"https://discord.com/api/downloads/distributions/app/installers/latest?channel=stable&platform=win&arch=x86","os":"Windows (32-bits)","size":"67.6 MB","language":"Español","content":""}]},{"id":1625266800,"name":"Clip Studio Paint","date":"July 02, 2021 18:00:00","icon":"https://dl2.macupdate.com/images/icons256/32454.png?d=1513368213","dev":"Celsys","description":"\r\nEs un programa de dibujo y pintura digital muy versátil, ideal tanto para entintar como para pintar gracias a sus numerosas funciones igualmente útiles y únicas. Es muy fácil aprender a usarlo y cuenta con una enorme variedad de herramientas y pinceles personalizables que permiten crear todo tipo de ilustraciones.\r\n","versions":[{"name":"Versión 1.10.6","installer":"https://drive.google.com/u/1/uc?id=1RXEW5bZhHmcWcYqpEYI1pHnlYLnmm5Km&export=download","os":"Windows (32/64-bits)","size":"251.1 MB","language":"Multilenguaje","content":""}]},{"id":1621551600,"name":"Serva Community","date":"May 20, 2021 18:00:00","icon":"https://www.vercot.com/~serva/Imgs/icon%20Serva%20128grey.png","dev":"Vercot LLC","description":"\r\nUn servidor de entorno de ejecución de prearranque ofrece los recursos de red necesarios a las PC cliente que se configuraron para arrancar desde uno de sus dispositivos de red en lugar de arrancar desde las opciones clásicas de almacenamiento masivo (SSD / HDD / DVD). El entorno ofrecido consiste principalmente en servicios de servidor DHCP o proxy DHCP y TFTP.\r\n","versions":[{"name":"Versión 4.4.0","installer":"https://www.vercot.com/~serva/download/Serva_Community_v4.4.0-21041116.zip","os":"Windows (32/64-bits)","size":"5.9 MB","language":"Inglés","content":""}]},{"id":1621126800,"name":"Adobe Photoshop","date":"May 15, 2021 20:00:00","icon":"https://windows-cdn.softpedia.com/screenshots/Adobe-PhotoShop-Update_1.png","dev":"Adobe Inc.","description":"\r\nEs un editor de fotografías desarrollado por Adobe Systems Incorporated. Usado principalmente para el retoque de fotografías y gráficos.\r\n","versions":[{"name":"Versión CS6","installer":"https://drive.google.com/u/1/uc?id=1EBxF9ulAS6lnF_IyH3lbZMzXSuBITc3b&export=download","os":"Windows (32/64-bits)","size":"1.49 GB","language":"Español","content":""}]},{"id":1621119600,"name":"Microsoft Office","date":"May 15, 2021 18:00:00","icon":"https://linkscrack.com/wp-content/uploads/2020/09/Microsoft-Office-Crack.png","dev":"Microsoft","description":"\r\nEs un paquete de programas informáticos para oficina desarrollado por Microsoft Corp. (una empresa estadounidense fundada en 1975). Se trata de un conjunto de aplicaciones que realizan tareas ofimáticas, es decir, que permiten automatizar y perfeccionar las actividades habituales de una oficina.\r\n","versions":[{"name":"Versión 2013","installer":"https://drive.google.com/u/1/uc?id=12ZVytsdyNZNp7Us1X9XiaNsretFAZhgl&export=download","os":"Windows (32/64-bits)","size":"681.8 MB","language":"Español","content":"\r\n### Recomendaciones\r\n\r\nPara realizar la instación no se requiere de desactivar su antivirus, pero\r\nse recomienda agregar a la lista de exclusiones o desactivar cuando se este\r\nejecutando la activación.\r\n\r\n### Contenido\r\n\r\nDentro del archivo .zip se encuentra la carpeta del instalador para sistemas\r\noperativos basados en 32-bits, tambien encontrara el activador Microsoft Toolkit.\r\n"}]}]
+[
+  {
+    "id": 1626969600,
+    "name": "Discord",
+    "date": "July 22, 2021 11:00:00",
+    "icon": "https://www.podfeet.com/blog/wp-content/uploads/2018/02/discord-logo.png",
+    "dev": "Discord Inc",
+    "description": "Es una aplicación de chat, similar a programas como Skype. Está dirigido específicamente a los gamers, brindándoles formas de reunirse, coordinar el juego y hablar mientras juegan.",
+    "versions": [
+      {
+        "name": "Última Versión",
+        "installer": "https://discord.com/api/downloads/distributions/app/installers/latest?channel=stable&platform=win&arch=x86",
+        "os": "Windows (32-bits)",
+        "size": "67.6 MB",
+        "language": "Español",
+        "content": ""
+      }
+    ]
+  },
+  {
+    "id": 1625266800,
+    "name": "Clip Studio Paint",
+    "date": "July 02, 2021 18:00:00",
+    "icon": "https://dl2.macupdate.com/images/icons256/32454.png?d=1513368213",
+    "dev": "Celsys",
+    "description": "Es un programa de dibujo y pintura digital muy versátil, ideal tanto para entintar como para pintar gracias a sus numerosas funciones igualmente útiles y únicas.",
+    "versions": [
+      {
+        "name": "Versión 1.10.6",
+        "installer": "https://drive.google.com/u/1/uc?id=1RXEW5bZhHmcWcYqpEYI1pHnlYLnmm5Km&export=download",
+        "os": "Windows (32/64-bits)",
+        "size": "251.1 MB",
+        "language": "Multilenguaje",
+        "content": ""
+      }
+    ]
+  },
+  {
+    "id": 1621551600,
+    "name": "Serva Community",
+    "date": "May 20, 2021 18:00:00",
+    "icon": "https://www.vercot.com/~serva/Imgs/icon%20Serva%20128grey.png",
+    "dev": "Vercot LLC",
+    "description": "Un servidor de entorno de ejecución de prearranque ofrece los recursos de red necesarios a las PC cliente que se configuraron para arrancar desde uno de sus dispositivos de red en lugar de arrancar desde las opciones clásicas de almacenamiento masivo (SSD / HDD / DVD).",
+    "versions": [
+      {
+        "name": "Versión 4.4.0",
+        "installer": "https://www.vercot.com/~serva/download/Serva_Community_v4.4.0-21041116.zip",
+        "os": "Windows (32/64-bits)",
+        "size": "5.9 MB",
+        "language": "Inglés",
+        "content": ""
+      }
+    ]
+  },
+  {
+    "id": 1621126800,
+    "name": "Adobe Photoshop",
+    "date": "May 15, 2021 20:00:00",
+    "icon": "https://windows-cdn.softpedia.com/screenshots/Adobe-PhotoShop-Update_1.png",
+    "dev": "Adobe Inc.",
+    "description": "Es un editor de fotografías desarrollado por Adobe Systems Incorporated. Usado principalmente para el retoque de fotografías y gráficos.",
+    "versions": [
+      {
+        "name": "Versión CS6",
+        "installer": "https://drive.google.com/u/1/uc?id=1EBxF9ulAS6lnF_IyH3lbZMzXSuBITc3b&export=download",
+        "os": "Windows (32/64-bits)",
+        "size": "1.49 GB",
+        "language": "Español",
+        "content": ""
+      }
+    ]
+  },
+  {
+    "id": 1621119600,
+    "name": "Microsoft Office",
+    "date": "May 15, 2021 18:00:00",
+    "icon": "https://linkscrack.com/wp-content/uploads/2020/09/Microsoft-Office-Crack.png",
+    "dev": "Microsoft",
+    "description": "Es un paquete de programas informáticos para oficina desarrollado por Microsoft Corp. Se trata de un conjunto de aplicaciones que realizan tareas ofimáticas.",
+    "versions": [
+      {
+        "name": "Versión 2013",
+        "installer": "https://drive.google.com/u/1/uc?id=12ZVytsdyNZNp7Us1X9XiaNsretFAZhgl&export=download",
+        "os": "Windows (32/64-bits)",
+        "size": "681.8 MB",
+        "language": "Español",
+        "content": "\n### Recomendaciones\n\nPara realizar la instación no se requiere de desactivar su antivirus, pero\nse recomienda agregar a la lista de exclusiones o desactivar cuando se este\nejecutando la activación.\n\n### Contenido\n\nDentro del archivo .zip se encuentra la carpeta del instalador para sistemas\noperativos basados en 32-bits, tambien encontrara el activador Microsoft Toolkit.\n"
+      }
+    ]
+  }
+]
