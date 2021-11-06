@@ -104,12 +104,12 @@
   transform: rotate(180deg);
 }
 
-.home__section-item span:hover > svg:nth-child(1) {
+.home__section-item:hover span > svg:nth-child(1) {
   transform: translateX(-5px) rotate(180deg);
   opacity: 0.7;
 }
 
-.home__section-item span:hover > svg:nth-child(2) {
+.home__section-item:hover span > svg:nth-child(2) {
   transform: translateX(5px);
   opacity: 0.7;
 }
