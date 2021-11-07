@@ -14,6 +14,9 @@
 
 .navWrapper {
   height: 100%;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility .3s ease-out,opacity .3s ease-out;
 }
 
 .navList {
@@ -59,6 +62,16 @@
     font-size: 28px;
   }
 
+  .navList {
+    position: absolute;
+    top: 90px;
+    right: 0;
+    height: fit-content;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.7) 0px 5px 15px;
+  }
+
   .navToggle {
     display: flex;
     justify-content: center;
@@ -70,6 +83,7 @@
 
   .hidden {
     visibility: hidden;
+    opacity: 0;
   }
 }
 

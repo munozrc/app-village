@@ -17,7 +17,12 @@ const Header: FC<{}> = () => {
           <li className={styles.navItem}><Link to='/files'>Archivos</Link></li>
         </ul>
       </nav>
-      <button className={styles.navToggle} onClick={setHidden}><MenuIcon /></button>
+      <button
+        className={styles.navToggle}
+        onClick={setHidden}
+      >
+        <MenuIcon />
+      </button>
     </header>
   )
 }
