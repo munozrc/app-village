@@ -7,6 +7,7 @@
 .all-programs__bar {
   display: flex;
   width: 100%;
+  margin-bottom: 20px;
 }
 
 .all-programs__input {
@@ -35,42 +36,4 @@
 
 .all-programs__button:hover {
   opacity: 0.8;
-}
-
-.all-programs__content {
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-  gap: 12px;
-}
-
-.all-programs__program {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  user-select: none;
-  cursor: pointer;
-  padding: 20px 28px;
-  gap: 15px;
-  color: #fafafa;
-  background: #2b2e33;
-  border-radius: 4px;
-  transition: background 0.3s ease;
-}
-
-.all-programs__program:hover {
-  background: #393d45;
-}
-
-.all-programs__icon {
-  width: 40%;
-  min-width: 40px;
-  max-width: 60px;
-  aspect-ratio: 1/1;
-  user-select: none;
-}
-
-.all-programs__name {
-  font-size: 18px;
-  font-weight: 600;
 }

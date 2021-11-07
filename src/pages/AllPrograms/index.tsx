@@ -1,6 +1,6 @@
 import React, { FC, FormEvent } from 'react'
-import { Link } from 'react-router-dom'
 import SearchIcon from '../../assets/SearchIcon'
+import ListCards from '../../components/ListCards'
 
 import programs from '../../data/programs.json'
 
@@ -19,16 +19,16 @@ const AllPrograms: FC<{}> = () => {
           <SearchIcon />
         </button>
       </form>
-      <section className='all-programs__content'>
+      <ListCards>
         {programs.map((ele) => (
-          <Link key={ele.id} className='all-programs__program' to={`/programs/${ele.id}`}>
-            <img className='all-programs__icon' src={ele.icon} alt={ele.name} />
-            <div className='all-programs__data'>
-              <h3 className='all-programs__name'>{ele.name}</h3>
-            </div>
-          </Link>
+          <ListCards.Card
+            key={ele.id}
+            title={ele.name}
+            image={ele.icon}
+            href={`/programs/${ele.id}`}
+          />
         ))}
-      </section>
+      </ListCards>
     </div>
   )
 }
