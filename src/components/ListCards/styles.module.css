@@ -1,0 +1,78 @@
+/* ListCards Styles */
+
+.listCardsWrapper {
+  display: grid;
+  list-style-type: none;
+  grid-gap: 15px;
+  grid-auto-rows: 240px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+@media (max-width: 500px) {
+  .listCardsWrapper {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
+
+/* Card Styles */
+
+.cardWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  cursor: pointer;
+  padding: 20px;
+  color: #fafafa;
+  background: #2b2e33;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.cardWrapper:hover {
+  background: #393d45;
+}
+
+.cardImage {
+  width: 36%;
+  min-width: 80px;
+  aspect-ratio: 1/1;
+  height: auto;
+  user-select: none;
+}
+
+.cardTitle {
+  padding-top: 20px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.cardInfo {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  text-align: center;
+  opacity: 0.7;
+  padding-top: 10px;
+}
+
+.cardInfo > svg {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  align-self: center;
+  opacity: 0;
+}
+
+.cardInfo > svg:nth-child(1) {
+  transform: rotate(180deg);
+}
+
+.cardWrapper:hover .cardInfo > svg:nth-child(1) {
+  transform: translateX(-5px) rotate(180deg);
+  opacity: 0.7;
+}
+
+.cardWrapper:hover .cardInfo > svg:nth-child(2) {
+  transform: translateX(5px);
+  opacity: 0.7;
+}

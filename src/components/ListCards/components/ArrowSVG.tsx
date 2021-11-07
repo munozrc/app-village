@@ -1,6 +1,6 @@
 import React, { FC, SVGProps } from 'react'
 
-const ArrowIcon: FC<{}> = (props: SVGProps<SVGSVGElement>) => {
+const ArrowSVG: FC<{}> = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       stroke='currentColor'
@@ -22,4 +22,4 @@ const ArrowIcon: FC<{}> = (props: SVGProps<SVGSVGElement>) => {
   )
 }
 
-export default ArrowIcon
+export default ArrowSVG

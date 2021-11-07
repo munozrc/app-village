@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { Link } from 'react-router-dom'
-import ArrowIcon from '../../assets/ArrowIcon'
+import ListCards from '../../components/ListCards'
 import programs from '../../data/programs.json'
 
 import './styles.css'
@@ -19,21 +19,16 @@ const Home: FC<{}> = () => {
             nuevos con Windows.
           </p>
         </header>
-        <div className='home__section-content'>
+        <ListCards>
           {programs.slice(0, 4).map((ele) => (
-            <Link
+            <ListCards.Card
               key={ele.id}
-              to={`/programs/${ele.id}`}
-              className='home__section-item'
-            >
-              <img src={ele.icon} alt={ele.name} />
-              <h3>{ele.name}</h3>
-              <span>
-                <ArrowIcon />Más Información<ArrowIcon />
-              </span>
-            </Link>
+              title={ele.name}
+              image={ele.icon}
+              href={`/programs/${ele.id}`}
+            />
           ))}
-        </div>
+        </ListCards>
       </section>
     </div>
   )
