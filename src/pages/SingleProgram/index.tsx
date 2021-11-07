@@ -11,6 +11,7 @@ import LinkIcon from '../../assets/LinkIcon'
 import DownloadIcon from '../../assets/DownloadIcon'
 
 import ComboBox from '../../components/ComboBox'
+import ShapeSVG from './shape.svg'
 import programs from '../../data/programs.json'
 
 import styles from './styles.module.css'
@@ -30,6 +31,7 @@ const SingleProgram: FC<{}> = () => {
 
   return (
     <div className={styles.wrapper}>
+      <object type='image/svg+xml' data={ShapeSVG} className={styles.shape} />
       <header className={styles.headerWrapper}>
         <section className={styles.headerInfo}>
           <img className={styles.infoIcon} src={icon} alt={`logo-${String(name)}`} />

@@ -4,12 +4,15 @@
   display: flex;
   flex-direction: column;
   margin-top: 20px;
-  align-items: center;
+}
+
+.shape {
+  display: none;
 }
 
 .headerWrapper {
   width: 100%;
-  max-width: 600px;
+  max-width: 560px;
   display: flex;
   flex-direction: column;
 }
@@ -35,13 +38,13 @@
 .headerDescription {
   font-size: 1.15em;
   font-weight: 400;
-  text-align: justify;
+  text-align: left;
   opacity: 0.8;
 }
 
 .metadataWrapper {
   width: 100%;
-  max-width: 600px;
+  max-width: 560px;
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -104,4 +107,14 @@
   font-size: 1.15em;
   font-weight: 400;
   opacity: 0.8;
+}
+
+@media only screen and (min-width: 992px) {
+  .shape {
+    width: 47vw;
+    display: inline;
+    position: absolute;
+    top: -80px;
+    right: 0;
+  }
 }
