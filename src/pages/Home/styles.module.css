@@ -1,32 +1,32 @@
-.home {
+.container {
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
 }
 
-.home__section {
+.section {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.home__section-header {
+.sectionHeader {
   display: block;
 }
 
-.home__section-title {
+.sectionTitle {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.home__section-title-text {
+.sectionTitleText {
   font-size: 24px;
   font-weight: 600;
 }
 
-.home__section-link {
+.sectionLink {
   display: flex;
   align-items: center;
   height: 28px;
@@ -38,7 +38,7 @@
   border-radius: 50px;
 }
 
-.home__section-description {
+.sectionDescription {
   padding-top: 10px;
   margin-bottom: 16px;
   font-size: 18px;

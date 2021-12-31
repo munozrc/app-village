@@ -3,18 +3,18 @@ import { Link } from 'react-router-dom'
 import ListCards from '../../components/ListCards'
 import programs from '../../data/programs.json'
 
-import './styles.css'
+import styles from './styles.module.css'
 
 const Home: FC<{}> = () => {
   return (
-    <div className="home">
-      <section className="home__section">
-        <header className="home__section-header">
-          <div className="home__section-title">
-            <h3 className="home__section-title-text">Más Populares</h3>
-            <Link to="/programs" className="home__section-link">Ver Todos</Link>
+    <div className={styles.container}>
+      <section className={styles.section}>
+        <header className={styles.sectionHeader}>
+          <div className={styles.sectionTitle}>
+            <h3 className={styles.sectionTitleText}>Más Populares</h3>
+            <Link to="/programs" className={styles.sectionLink}>Ver Todos</Link>
           </div>
-          <p className="home__section-description">
+          <p className={styles.sectionDescription}>
             Estos son algunos de los programas más esenciales para dispositivos
             nuevos con Windows.
           </p>
