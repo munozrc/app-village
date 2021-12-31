@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react'
+import { FC, useState } from 'react'
 import { useParams } from 'react-router'
 import { Program } from '../../types'
 import ReactMarkdown from 'react-markdown'
@@ -31,7 +31,7 @@ const SingleProgram: FC<{}> = () => {
 
   return (
     <div className={styles.wrapper}>
-      <object type='image/svg+xml' data={ShapeSVG} className={styles.shape} />
+      <object type="image/svg+xml" data={ShapeSVG} className={styles.shape} />
       <header className={styles.headerWrapper}>
         <section className={styles.headerInfo}>
           <img className={styles.infoIcon} src={icon} alt={`logo-${String(name)}`} />
@@ -48,7 +48,7 @@ const SingleProgram: FC<{}> = () => {
           <ComboBox
             changeValue={setCurrentVersion}
             currentValue={currentVersion}
-            name='versions'
+            name="versions"
             values={versions.map(({ name }) => name)}
           />
         </span>

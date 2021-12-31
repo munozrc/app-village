@@ -1,4 +1,4 @@
-import React, { FC, FormEvent } from 'react'
+import { FC, FormEvent } from 'react'
 import SearchIcon from '../../assets/SearchIcon'
 import ListCards from '../../components/ListCards'
 
@@ -12,10 +12,10 @@ const AllPrograms: FC<{}> = () => {
   }
 
   return (
-    <div className='all-programs'>
-      <form className='all-programs__bar' onSubmit={handleSubmit}>
-        <input className='all-programs__input' placeholder='Buscar...' />
-        <button className='all-programs__button'>
+    <div className="all-programs">
+      <form className="all-programs__bar" onSubmit={handleSubmit}>
+        <input className="all-programs__input" placeholder="Buscar..." />
+        <button className="all-programs__button">
           <SearchIcon />
         </button>
       </form>
