@@ -1,16 +1,16 @@
-.all-programs {
+.container {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.all-programs__bar {
+.bar {
   display: flex;
   width: 100%;
   margin-bottom: 20px;
 }
 
-.all-programs__input {
+.inputSearch {
   width: 100%;
   padding: 10px 20px;
   font-size: 18px;
@@ -21,7 +21,7 @@
   outline: none;
 }
 
-.all-programs__button {
+.btnSearch {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,6 +34,6 @@
   transition: opacity 0.3s ease;
 }
 
-.all-programs__button:hover {
+.btnSearch:hover {
   opacity: 0.8;
 }

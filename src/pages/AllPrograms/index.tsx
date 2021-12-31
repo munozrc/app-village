@@ -4,7 +4,7 @@ import ListCards from '../../components/ListCards'
 
 import programs from '../../data/programs.json'
 
-import './styles.css'
+import styles from './styles.module.css'
 
 const AllPrograms: FC<{}> = () => {
   const handleSubmit = (event: FormEvent<HTMLFormElement>): void => {
@@ -12,10 +12,10 @@ const AllPrograms: FC<{}> = () => {
   }
 
   return (
-    <div className="all-programs">
-      <form className="all-programs__bar" onSubmit={handleSubmit}>
-        <input className="all-programs__input" placeholder="Buscar..." />
-        <button className="all-programs__button">
+    <div className={styles.container}>
+      <form className={styles.bar} onSubmit={handleSubmit}>
+        <input className={styles.inputSearch} placeholder="Buscar..." />
+        <button className={styles.btnSearch}>
           <SearchIcon />
         </button>
       </form>
