@@ -1,13 +1,10 @@
 import { FC } from 'react'
-import { HashRouter as Router, Route, Switch } from 'react-router-dom'
-
-import Header from './components/Header'
-
-import Home from './pages/Home'
-import AllPrograms from './pages/AllPrograms'
-import SingleProgram from './pages/SingleProgram'
-
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import './App.css'
+import Header from './components/Header'
+import AllPrograms from './pages/AllPrograms'
+import Home from './pages/Home'
+import SingleProgram from './pages/SingleProgram'
 
 const App: FC<{}> = () => {
   return (

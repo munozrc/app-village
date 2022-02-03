@@ -7,8 +7,6 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint ./src --ext .ts,.tsx",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
     "generate-programs-data": "npx ts-node --skip-project src/scripts/generate-programs-data.ts"
   },
   "dependencies": {
@@ -31,7 +29,6 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.2.0",
     "eslint-plugin-react": "^7.28.0",
-    "gh-pages": "3.2.3",
     "typescript": "4.4.4",
     "vite": "2.6.13"
   }
