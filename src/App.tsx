@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Header from './components/Header'
 import AllPrograms from './pages/AllPrograms'
@@ -9,14 +9,14 @@ import SingleProgram from './pages/SingleProgram'
 const App: FC<{}> = () => {
   return (
     <main className="parent-container">
-      <Router>
+      <BrowserRouter>
         <Header />
-        <Switch>
-          <Route path="/programs/:id" component={SingleProgram} />
-          <Route path="/programs" component={AllPrograms} />
-          <Route path="/" component={Home} />
-        </Switch>
-      </Router>
+        <Routes>
+          <Route path="/programs/:id" element={<SingleProgram />} />
+          <Route path="/programs" element={<AllPrograms />} />
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
     </main>
   )
 }
