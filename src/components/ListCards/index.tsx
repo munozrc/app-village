@@ -1,6 +1,6 @@
 import { FC } from 'react'
-import Card, { CardProps } from './components/Card'
 
+import Card, { CardProps } from './components/Card'
 import styles from './styles.module.css'
 
 interface ReturnType {

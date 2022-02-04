@@ -1,7 +1,9 @@
 import { FC } from 'react'
 import { Link } from 'react-router-dom'
-import ArrowSVG from './ArrowSVG'
+
 import styles from '../styles.module.css'
+
+import ArrowSVG from './ArrowSVG'
 
 export interface CardProps {
   image: string

@@ -1,5 +1,6 @@
-import * as path from 'path'
 import { promises as fs } from 'fs'
+import * as path from 'path'
+
 import { Program, ProgramVersion } from '../types'
 import { readMarkdown } from '../utils/files';
 

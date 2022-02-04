@@ -1,7 +1,9 @@
 import { FC } from 'react'
 import { Link } from 'react-router-dom'
+
 import MenuIcon from '../../assets/MenuIcon'
 import useToggle from '../../hooks/useToggle'
+
 import styles from './styles.module.css'
 
 const Header: FC<{}> = () => {

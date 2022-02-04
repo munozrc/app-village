@@ -1,7 +1,7 @@
 import { FC, FormEvent } from 'react'
+
 import SearchIcon from '../../assets/SearchIcon'
 import ListCards from '../../components/ListCards'
-
 import programs from '../../data/programs.json'
 
 import styles from './styles.module.css'
