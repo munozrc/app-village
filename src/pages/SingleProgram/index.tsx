@@ -1,25 +1,22 @@
 import { FC, useState } from 'react'
-import { useParams } from 'react-router'
-import { Program } from '../../types'
 import ReactMarkdown from 'react-markdown'
-
-import PackageIcon from '../../assets/PackageIcon'
-import SystemIcon from '../../assets/SystemIcon'
-import StorageIcon from '../../assets/StorageIcon'
+import { useParams } from 'react-router'
+import DownloadIcon from '../../assets/DownloadIcon'
 import LanguageIcon from '../../assets/LanguageIcon'
 import LinkIcon from '../../assets/LinkIcon'
-import DownloadIcon from '../../assets/DownloadIcon'
-
+import PackageIcon from '../../assets/PackageIcon'
+import StorageIcon from '../../assets/StorageIcon'
+import SystemIcon from '../../assets/SystemIcon'
 import ComboBox from '../../components/ComboBox'
-import ShapeSVG from './shape.svg'
 import programs from '../../data/programs.json'
-
+import { Program } from '../../types'
+import ShapeSVG from './shape.svg'
 import styles from './styles.module.css'
 
 const SingleProgram: FC<{}> = () => {
   const { id } = useParams<{id: string}>()
   const [currentVersion, setCurrentVersion] = useState<number>(0)
-  const currentProgram: Program | undefined = programs.find((ele) => ele.id === parseInt(id))
+  const currentProgram: Program | undefined = programs.find((ele) => ele.id === parseInt(id ?? ''))
 
   const handleDownload = (): void => {
     if (typeof currentProgram === 'undefined') return
