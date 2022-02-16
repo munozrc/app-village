@@ -25,6 +25,14 @@ body::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.2);
 }
 
+#root {
+  width: 100%;
+  min-height: 100vh;
+  max-width: 1200px;
+  padding: 0 50px 50px 50px;
+  margin: 0 auto;
+}
+
 button {
   background: none;
   border: none;
@@ -37,4 +45,10 @@ a {
   color: #fafafa;
   cursor: pointer;
   text-decoration: none;
+}
+
+@media (max-width: 500px) {
+  #root {
+    padding: 0px 20px 20px 20px;
+  }
 }
