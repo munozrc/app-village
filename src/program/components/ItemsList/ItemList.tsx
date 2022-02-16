@@ -2,7 +2,7 @@ import { Item } from './Item'
 import styles from './ItemList.module.css'
 
 interface ItemElement {
-  id: string,
+  id: number,
   icon: string,
   name: string
 }
