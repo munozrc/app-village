@@ -1,5 +1,4 @@
-import { ItemList } from '../components/ItemsList'
-import { SearchForm } from '../components/SearchForm'
+import { ItemList, SearchForm } from '../components'
 import { usePrograms } from '../hooks/usePrograms'
 
 import styles from './ProgramsPage.module.css'
