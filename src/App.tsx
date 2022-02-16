@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Header from './components/Header'
 import SingleProgram from './pages/SingleProgram'
 import { ProgramsPage } from './program/pages'
-import { HomePage } from './home/page'
+import { HomePage } from './home/pages'
 
 const App = () => {
   return (
