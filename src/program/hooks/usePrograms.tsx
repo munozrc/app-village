@@ -1,30 +1,41 @@
+import { FormEvent } from 'react'
 import { useSearchParams } from 'react-router-dom'
 
 import listPrograms from '../../data/programs.json'
 import { Program } from '../../types'
 
 interface returnType {
-  listPrograms: Program[],
-  normalizeListItems: () => Array<{ id: number, icon: string, name: string }>
+  listPrograms: Program[]
+  programSearchList: Array<{ id: number, icon: string, name: string }>
+  handleSubmitSearch: (event: FormEvent<HTMLFormElement>) => void
 }
 
 export const usePrograms = (): returnType => {
-  const [searchParams] = useSearchParams()
+  const [searchParams, setSearchParams] = useSearchParams()
 
-  const normalizeListItems = () => {
+  const normalizeListPrograms = () => {
     const programSearch = searchParams.get('search_query')?.toLowerCase() ?? ''
-    const programs = listPrograms.map((item) => ({
+    const newList = listPrograms.map((item) => ({
       id: item.id,
       icon: item.icon,
       name: item.name
     }))
 
-    if (programSearch !== '') return programs.filter(item => item.name.toLowerCase().includes(programSearch))
-    return programs
+    if (programSearch !== '') return newList.filter(({ name }) => name.toLowerCase().includes(programSearch))
+    return newList
   }
 
+  const handleSubmitSearch = (event: FormEvent<HTMLFormElement>): void => {
+    event.preventDefault()
+
+    const formData = new FormData(event.currentTarget)
+    const searchValue = formData.get('search') as string
+
+    setSearchParams(searchValue !== '' ? { search_query: searchValue } : {})
+  }
   return {
     listPrograms,
-    normalizeListItems
+    programSearchList: normalizeListPrograms(),
+    handleSubmitSearch
   }
 }
