@@ -1,5 +1,5 @@
 import { ItemList } from '../components/ItemsList'
-import { Searchbar } from '../components/Searchbar'
+import { SearchForm } from '../components/SearchForm'
 import { usePrograms } from '../hooks/usePrograms'
 
 import styles from './ProgramsPage.module.css'
@@ -9,7 +9,7 @@ export const ProgramsPage = () => {
 
   return (
     <div className={styles.programsPage}>
-      <Searchbar />
+      <SearchForm />
       <ItemList items={normalizeListItems()} />
     </div>
   )
