@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 
 import { ComboBox } from '../../components/ComboBox'
 import { DownloadIcon, LanguageIcon, LinkIcon, PackageIcon, StorageIcon, SystemIcon } from '../../components/Icons'
+import { Shape } from '../../components/Shape'
 import { useSingleProgram } from '../../program/hooks'
 
 import styles from './ProgramPage.module.css'
@@ -23,7 +24,7 @@ export const ProgramPage = () => {
 
   return (
     <div className={styles.wrapper}>
-      <object type="image/svg+xml" data="/shape.svg" className={styles.shape} />
+      <Shape className={styles.shape} />
       <header className={styles.headerWrapper}>
         <section className={styles.headerInfo}>
           <img className={styles.infoIcon} src={icon} alt={`logo-${String(name)}`} />
