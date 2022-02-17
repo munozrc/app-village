@@ -1,15 +1,15 @@
-import { ChangeEvent, FC } from 'react'
+import { ChangeEvent } from 'react'
 
 import styles from './styles.module.css'
 
-interface Props {
+interface ComboBoxProps {
+  currentValue: number
   name: string
   values: string[]
-  currentValue: number
   changeValue: (value: number) => void
 }
 
-const ComboBox: FC<Props> = ({ name, values, currentValue, changeValue }) => {
+export const ComboBox = ({ currentValue, name, values, changeValue }: ComboBoxProps) => {
   const handleOnChangeValue = (event: ChangeEvent<HTMLSelectElement>): void => {
     const value = parseInt(event.target.value)
     changeValue(value)
@@ -17,10 +17,10 @@ const ComboBox: FC<Props> = ({ name, values, currentValue, changeValue }) => {
 
   return (
     <select
-      name={name}
-      value={currentValue}
-      onChange={handleOnChangeValue}
       className={styles.wrapper}
+      onChange={handleOnChangeValue}
+      value={currentValue}
+      name={name}
     >
       {values.map((valueShow, index) => (
         <option key={valueShow} value={index}>
@@ -30,5 +30,3 @@ const ComboBox: FC<Props> = ({ name, values, currentValue, changeValue }) => {
     </select>
   )
 }
-
-export default ComboBox
