@@ -8,7 +8,7 @@ interface returnType {
   activeVersion: number
 }
 
-export const useProgram = (id: string | undefined): returnType => {
+export const useSingleProgram = (id: string | undefined): returnType => {
   const [activeProgram, setActiveProgram] = useState<Program | undefined>(undefined)
   const [activeVersion] = useState<number>(0)
 

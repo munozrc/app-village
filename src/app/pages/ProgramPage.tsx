@@ -4,13 +4,13 @@ import { useParams } from 'react-router-dom'
 
 import { ComboBox } from '../../components/ComboBox'
 import { DownloadIcon, LanguageIcon, LinkIcon, PackageIcon, StorageIcon, SystemIcon } from '../../components/Icons'
-import { useProgram } from '../../program/hooks'
+import { useSingleProgram } from '../../program/hooks'
 
 import styles from './ProgramPage.module.css'
 
 export const ProgramPage = () => {
   const { id } = useParams()
-  const { activeProgram, activeVersion } = useProgram(id)
+  const { activeProgram, activeVersion } = useSingleProgram(id)
 
   const handleDownload = (): void => {
     if (typeof activeProgram === 'undefined') return

@@ -1,2 +1,2 @@
 export { usePrograms } from './usePrograms'
-export { useProgram } from './useProgram'
+export { useSingleProgram } from './useSingleProgram'
