@@ -1,4 +1,4 @@
-import { SearchIcon } from '../../components/Icons'
+import { SearchIcon } from '../../app/components/Icons'
 import { usePrograms } from '../hooks/usePrograms'
 
 import styles from './SearchForm.module.css'

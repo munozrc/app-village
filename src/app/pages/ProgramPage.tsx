@@ -2,9 +2,9 @@
 import ReactMarkdown from 'react-markdown'
 import { useParams } from 'react-router-dom'
 
-import { ComboBox } from '../../components/ComboBox'
-import { DownloadIcon, LanguageIcon, LinkIcon, PackageIcon, StorageIcon, SystemIcon } from '../../components/Icons'
-import { Shape } from '../../components/Shape'
+import { ComboBox } from '../components/ComboBox'
+import { DownloadIcon, LanguageIcon, LinkIcon, PackageIcon, StorageIcon, SystemIcon } from '../components/Icons'
+import { Shape } from '../components/Shape'
 import { useSingleProgram } from '../../program/hooks'
 
 import styles from './ProgramPage.module.css'
