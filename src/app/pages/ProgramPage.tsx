@@ -10,7 +10,7 @@ import styles from './ProgramPage.module.css'
 
 export const ProgramPage = () => {
   const { id } = useParams()
-  const { activeProgram, activeVersion } = useSingleProgram(id)
+  const { activeProgram, activeVersion, changeActiveVersion } = useSingleProgram(id)
 
   const handleDownload = (): void => {
     if (typeof activeProgram === 'undefined') return
@@ -38,7 +38,7 @@ export const ProgramPage = () => {
         <span className={styles.metadataItem}>
           <PackageIcon />
           <ComboBox
-            changeValue={() => {}}
+            changeValue={changeActiveVersion}
             currentValue={activeVersion}
             name="versions"
             values={versions.map(({ name }) => name)}

@@ -6,11 +6,12 @@ import { Program } from '../types'
 interface returnType {
   activeProgram: Program | undefined
   activeVersion: number
+  changeActiveVersion: (value: number) => void
 }
 
 export const useSingleProgram = (id: string | undefined): returnType => {
   const [activeProgram, setActiveProgram] = useState<Program | undefined>(undefined)
-  const [activeVersion] = useState<number>(0)
+  const [activeVersion, setActiveVersion] = useState<number>(0)
 
   useEffect(() => {
     if (typeof id === 'undefined') return
@@ -19,8 +20,13 @@ export const useSingleProgram = (id: string | undefined): returnType => {
     setActiveProgram(() => current)
   }, [id])
 
+  const changeActiveVersion = (value: number) => {
+    setActiveVersion(() => value)
+  }
+
   return {
     activeProgram,
-    activeVersion
+    activeVersion,
+    changeActiveVersion
   }
 }
