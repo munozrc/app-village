@@ -1,7 +1,7 @@
 import { FormEvent } from 'react'
 import { useSearchParams } from 'react-router-dom'
 
-import listPrograms from '../../data/programs.json'
+import listPrograms from '../data.json'
 import { ItemElement, Program } from '../types'
 
 interface returnType {

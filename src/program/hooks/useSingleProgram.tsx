@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import listPrograms from '../../data/programs.json'
+import listPrograms from '../data.json'
 import { Program } from '../types'
 
 interface returnType {
