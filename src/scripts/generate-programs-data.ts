@@ -1,7 +1,7 @@
 import { promises as fs } from 'fs'
 import * as path from 'path'
 
-import { Program, ProgramVersion } from '../types'
+import { Program, ProgramVersion } from '../program/types'
 import { readMarkdown } from '../utils/files';
 
 (async () => {

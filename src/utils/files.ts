@@ -1,4 +1,4 @@
-import { Metadata } from '../types'
+interface Metadata { [key: string]: string };
 
 function getMetadataIndices (acc: number[], elem: string, index: number): number[] {
   if (/^---/.test(elem)) acc.push(index)
