@@ -1,5 +1,5 @@
-import { SearchIcon } from '../../../components/Icons'
-import { usePrograms } from '../../hooks/usePrograms'
+import { SearchIcon } from '../../components/Icons'
+import { usePrograms } from '../hooks/usePrograms'
 
 import styles from './SearchForm.module.css'
 

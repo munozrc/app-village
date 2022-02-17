@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import { PageLayout } from './app/components/PageLayout'
 import { HomePage } from './app/pages/HomePage'
-import { ProgramsPage } from './program/pages'
+import { ProgramsPage } from './app/pages/ProgramsPage'
 
 import './main.css'
 

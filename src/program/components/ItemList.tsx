@@ -1,11 +1,7 @@
+import { ItemElement } from '../types'
+
 import { Item } from './Item'
 import styles from './ItemList.module.css'
-
-interface ItemElement {
-  id: number,
-  icon: string,
-  name: string
-}
 
 interface ItemListProps {
   items: ItemElement[]

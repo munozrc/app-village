@@ -2,11 +2,11 @@ import { FormEvent } from 'react'
 import { useSearchParams } from 'react-router-dom'
 
 import listPrograms from '../../data/programs.json'
-import { Program } from '../../types'
+import { ItemElement, Program } from '../types'
 
 interface returnType {
   listPrograms: Program[]
-  programSearchList: Array<{ id: number, icon: string, name: string }>
+  programSearchList: ItemElement[]
   handleSubmitSearch: (event: FormEvent<HTMLFormElement>) => void
 }
 
@@ -33,6 +33,7 @@ export const usePrograms = (): returnType => {
 
     setSearchParams(searchValue !== '' ? { search_query: searchValue } : {})
   }
+
   return {
     listPrograms,
     programSearchList: normalizeListPrograms(),

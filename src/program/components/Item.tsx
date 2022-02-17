@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-import { ArrowIcon } from '../../../components/Icons'
+import { ArrowIcon } from '../../components/Icons'
 
 import styles from './Item.module.css'
 

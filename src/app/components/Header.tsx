@@ -1,12 +1,12 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import { MenuIcon } from '../../components/Icons'
-import useToggle from '../../hooks/useToggle'
 
 import styles from './Header.module.css'
 
 export const Header = () => {
-  const [hidden, setHidden] = useToggle(true)
+  const [hidden, setHidden] = useState<boolean>(true)
   return (
     <header className={styles.wrapper}>
       <Link to="/" className={styles.logo}>
@@ -20,7 +20,7 @@ export const Header = () => {
       </nav>
       <button
         className={styles.navToggle}
-        onClick={setHidden}
+        onClick={() => setHidden(prev => !prev)}
       >
         <MenuIcon />
       </button>

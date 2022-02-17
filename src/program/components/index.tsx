@@ -1,3 +1,2 @@
-export { ItemList } from './ItemsList'
-export { ProgramSection } from './ProgramSection'
+export { ItemList } from './ItemList'
 export { SearchForm } from './SearchForm'
