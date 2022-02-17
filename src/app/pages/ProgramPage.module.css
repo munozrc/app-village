@@ -1,0 +1,120 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.shape {
+  display: none;
+}
+
+.headerWrapper {
+  width: 100%;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+}
+
+.headerInfo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.infoIcon {
+  width: 100%;
+  max-width: 48px;
+  margin-right: 16px;
+}
+
+.infoName {
+  font-size: 2.4em;
+  font-weight: 600;
+}
+
+.headerDescription {
+  font-size: 1.15em;
+  font-weight: 400;
+  text-align: left;
+  opacity: 0.8;
+}
+
+.metadataWrapper {
+  width: 100%;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 20px 0;
+}
+
+.metadataWrapper > button {
+  margin-bottom: 20px;
+}
+
+.metadataButton {
+  width: 100%;
+  height: 44px;
+  min-height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  color: #1e2127;
+  background: #61afef;
+  border-radius: 4px;
+  transition: opacity 0.3s ease;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.metadataButton > svg {
+  margin-right: 10px;
+}
+
+.metadataItem {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 1.15em;
+}
+
+.metadataItem > svg {
+  font-size: 28px;
+  stroke: #fff;
+  margin-right: 14px;
+}
+
+.contentWrapper {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.contentWrapper h3 {
+  font-size: 1.5em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #373e47;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.contentWrapper p {
+  font-size: 1.15em;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+@media only screen and (min-width: 992px) {
+  .shape {
+    width: 47vw;
+    display: inline;
+    position: absolute;
+    top: -80px;
+    right: 0;
+  }
+}
