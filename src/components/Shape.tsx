@@ -10,6 +10,7 @@ export const Shape = (props: SVGProps<SVGSVGElement>) => (
   >
     <mask
       id="a"
+      mask-type="alpha"
       maskUnits="userSpaceOnUse"
       x={0}
       y={0}

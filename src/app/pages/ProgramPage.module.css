@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   margin-top: 20px;
+  overflow-x: hidden;
 }
 
 .shape {
@@ -111,10 +112,9 @@
 
 @media only screen and (min-width: 992px) {
   .shape {
-    width: 47vw;
-    display: inline;
+    display: block;
     position: absolute;
-    top: -80px;
-    right: 0;
+    top: -30px;
+    right: 0px;
   }
 }
