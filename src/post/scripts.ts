@@ -38,9 +38,11 @@ async function readAllFilesInAFolder (path: string): Promise<Post> {
       const date = new Date(metadata.date)
       const timestamp = date.getTime() / 1000
       const author = { displayName, photoURL, link }
+      const pathLink = path.split('/')[1]
 
       return {
         id: timestamp,
+        path: pathLink,
         title,
         heroImage,
         content,
