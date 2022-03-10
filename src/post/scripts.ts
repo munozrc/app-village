@@ -43,6 +43,7 @@ async function readAllFilesInAFolder (path: string): Promise<Post> {
       return {
         id: timestamp,
         path: pathLink,
+        date: metadata.date,
         title,
         heroImage,
         content,
