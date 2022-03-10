@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import { PageLayout } from './app/components/PageLayout'
 import { HomePage } from './app/pages/HomePage'
+import { PostPage } from './app/pages/PostPage'
 import { ProgramPage } from './app/pages/ProgramPage'
 import { ProgramsPage } from './app/pages/ProgramsPage'
 
@@ -12,6 +13,7 @@ ReactDOM.render(
   <BrowserRouter>
     <PageLayout>
     <Routes>
+      <Route path="/posts/:path" element={<PostPage />} />
       <Route path="/programs/:id" element={<ProgramPage />} />
       <Route path="/programs" element={<ProgramsPage />} />
       <Route path="/" element={<HomePage />} />
