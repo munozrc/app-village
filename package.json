@@ -6,6 +6,7 @@
     "build": "tsc && vite build",
     "dev": "vite",
     "data:programs": "npx ts-node --skip-project src/program/scripts.ts",
+    "data:posts": "npx ts-node --skip-project src/post/scripts.ts",
     "preview": "vite preview"
   },
   "dependencies": {
