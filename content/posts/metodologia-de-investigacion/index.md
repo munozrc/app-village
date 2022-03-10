@@ -1,13 +1,13 @@
 ---
 title: Metodologia de investigación
 date: Mar 9, 2022 20:59:00
-heroImage: https://windows-cdn.softpedia.com/screenshots/Adobe-PhotoShop-Update_1.png
+heroImage: https://raw.githubusercontent.com/munozrc/softlink/tree/main/content/post/metodologia-de-investigacion/glenn-carstens-peters-npxXWgQ33ZQ-unsplash.webp
 authorDisplayName: munozrc
 authorPhotoURL: https://avatars.githubusercontent.com/u/47870821?v=4
 authorLink: https://github.com/munozrc
 ---
 
-# Listado de bases de datos
+## Listado de bases de datos
 
 - [IEEExplore](https://ieeexplore.ieee.org/Xplore/home.jsp)
 - [Google Académico](https://scholar.google.es/schhp?hl=es)
