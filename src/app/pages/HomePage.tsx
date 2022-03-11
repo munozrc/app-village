@@ -1,3 +1,4 @@
+import { PostList } from '../../post/components/PostList'
 import { ItemList } from '../../program/components'
 import { usePrograms } from '../../program/hooks'
 import { SectionLayout } from '../components/SectionLayout'
@@ -14,6 +15,12 @@ export const HomePage = () => {
         title="Más Populares"
       >
         <ItemList items={listPrograms.slice(0, 4)} />
+      </SectionLayout>
+      <SectionLayout
+        href="/posts"
+        title="Ultimos posts"
+      >
+        <PostList />
       </SectionLayout>
     </div>
   )
