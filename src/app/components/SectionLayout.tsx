@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom'
 import styles from './SectionLayout.module.css'
 
 interface SectionLayoutProps {
-  description: string
+  description?: string
   href: string
   title: string
   children: ReactNode
 }
 
-export const SectionLayout = ({ description, href, title, children }: SectionLayoutProps) => {
+export const SectionLayout = ({ description = '', href, title, children }: SectionLayoutProps) => {
   return (
     <section className={styles.sectionLayout}>
       <header className={styles.header}>
