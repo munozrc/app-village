@@ -5,6 +5,7 @@ heroImage: https://raw.githubusercontent.com/munozrc/softlink/main/content/posts
 authorDisplayName: munozrc
 authorPhotoURL: https://avatars.githubusercontent.com/u/47870821?v=4
 authorLink: https://github.com/munozrc
+description: Puedes encontrar algunos sitios y tips para realizar una buena consulta de fuentes como artículos o publicaciones.
 ---
 
 ## Listado de bases de datos
