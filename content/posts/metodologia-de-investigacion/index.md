@@ -1,7 +1,7 @@
 ---
 title: Metodologia de investigación
 date: Mar 9, 2022 20:59:00
-heroImage: https://raw.githubusercontent.com/munozrc/softlink/main/content/posts/metodologia-de-investigacion/anna-hunko-ajE5goOGzZc-unsplash.jpg.webp
+heroImage: https://raw.githubusercontent.com/munozrc/softlink/main/content/posts/metodologia-de-investigacion/anna-hunko-ajE5goOGzZc-unsplash.jpg
 authorDisplayName: munozrc
 authorPhotoURL: https://avatars.githubusercontent.com/u/47870821?v=4
 authorLink: https://github.com/munozrc
