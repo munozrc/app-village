@@ -33,7 +33,7 @@ async function readAllFilesInAFolder (path: string): Promise<Post> {
   return fs.readFile(`${path}/index.md`, 'utf8')
     .then(file => {
       const { metadata, content } = readMarkdown(file)
-      const { title, heroImage, authorDisplayName: displayName, authorPhotoURL: photoURL, authorLink: link } = metadata
+      const { title, heroImage, description, authorDisplayName: displayName, authorPhotoURL: photoURL, authorLink: link } = metadata
 
       const date = new Date(metadata.date)
       const timestamp = date.getTime() / 1000
@@ -47,7 +47,8 @@ async function readAllFilesInAFolder (path: string): Promise<Post> {
         title,
         heroImage,
         content,
-        author
+        author,
+        description
       }
     })
     .catch(() => { throw Error('index.md file not found') })

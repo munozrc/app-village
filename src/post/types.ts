@@ -5,6 +5,7 @@ export interface Post {
   path: string
   heroImage: string
   content: string
+  description: string
   author: {
     displayName: string
     photoURL: string
