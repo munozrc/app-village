@@ -2,12 +2,13 @@ import path from "node:path"
 import fs from "node:fs"
 
 import { useState } from "react"
+import Head from "next/head"
 import md from "markdown-it"
 
 import { DownloadIcon, LanguageIcon, LinkIcon, PackageIcon, StorageIcon, SystemIcon } from "../../components/Icons"
+import { readAllFilesInAFolder } from "../../program/helpers"
 import { ComboBox } from "../../components/ComboBox"
 import { Shape } from "../../components/Shape"
-import { readAllFilesInAFolder } from "../../program/helpers"
 import styles from "../../styles/ProgramPage.module.css"
 
 export default function ProgramPage ({ versions, icon, name, description, dev }) {
@@ -19,6 +20,11 @@ export default function ProgramPage ({ versions, icon, name, description, dev })
 
   return (
     <div className={styles.wrapper}>
+      <Head>
+        <title>{name} - Softlink</title>
+        <meta name="description" content={description} />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      </Head>
       <Shape className={styles.shape} />
       <header className={styles.headerWrapper}>
         <section className={styles.headerInfo}>
