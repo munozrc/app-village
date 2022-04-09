@@ -35,11 +35,9 @@ export async function readPostContent (path) {
       const date = new Date(metadata.date)
       const timestamp = date.getTime() / 1000
       const author = { displayName, photoURL, link }
-      const pathLink = path.split("/")[1]
 
       return {
         id: timestamp,
-        path: pathLink,
         date: metadata.date,
         title,
         heroImage,
