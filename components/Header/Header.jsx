@@ -14,7 +14,7 @@ export const Header = () => {
       </h1>
       <nav className={`${styles.navWrapper} ${hidden ? styles.hidden : ""}`}>
         <ul className={styles.navList}>
-          <li className={styles.navItem}><Link href="/programas">Programas</Link></li>
+          <li className={styles.navItem}><Link href="/programs">Programas</Link></li>
           <li className={styles.navItem}><Link href="/posts">Posts</Link></li>
         </ul>
       </nav>
