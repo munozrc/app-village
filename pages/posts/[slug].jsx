@@ -49,7 +49,7 @@ export async function getStaticPaths () {
 
 export async function getStaticProps ({ params: { slug } }) {
   const postPath = path.join(`content/posts/${slug}`)
-  const post = await readPostContent(postPath)
+  const post = await readPostContent(postPath, slug)
   const date = globalThis.Intl.DateTimeFormat("es", { dateStyle: "full" }).format(new Date(post.date))
 
   return {

@@ -8,7 +8,7 @@ export const PostList = ({ list }) => {
       {
         list.slice(0, 4).map(post => (
           <li key={post.id} className={styles.post__wrapper}>
-            <Link href={`/posts/${post.path}`}>
+            <Link href={`/posts/${post.slug}`}>
               <a className={styles.post__content}>
                 <img className={styles.post__thumbnail} src={post.heroImage} alt={post.title}/>
                 <h4 className={styles.post__title}>{post.title}</h4>

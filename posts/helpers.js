@@ -12,7 +12,7 @@ export async function readAllPost (folderParent) {
   try {
     for (const folder of folders) {
       console.log(`[+] Reading files from folder /${folder}`)
-      const data = await readPostContent(`${folderParent}/${folder}`)
+      const data = await readPostContent(`${folderParent}/${folder}`, folder)
       posts.push(data)
     }
   } catch (error) {
@@ -26,7 +26,7 @@ export async function readAllPost (folderParent) {
   return posts
 }
 
-export async function readPostContent (path) {
+export async function readPostContent (path, slug) {
   return fs.readFile(`${path}/index.md`, "utf8")
     .then(file => {
       const { metadata, content } = readMarkdown(file)
@@ -39,6 +39,7 @@ export async function readPostContent (path) {
       return {
         id: timestamp,
         date: metadata.date,
+        slug,
         title,
         heroImage,
         content,
