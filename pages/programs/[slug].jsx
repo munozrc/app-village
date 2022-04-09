@@ -1,9 +1,10 @@
+/* eslint-disable @next/next/no-img-element */
 import path from "node:path"
 import fs from "node:fs"
 
 import { useState } from "react"
+import ReactMarkdown from "react-markdown"
 import Head from "next/head"
-import md from "markdown-it"
 
 import { DownloadIcon, LanguageIcon, LinkIcon, PackageIcon, StorageIcon, SystemIcon } from "../../components/Icons"
 import { readAllFilesInAFolder } from "../../program/helpers"
@@ -60,7 +61,7 @@ export default function ProgramPage ({ versions, icon, name, description, dev })
         </span>
       </section>
       <section className={styles.contentWrapper}>
-        <div dangerouslySetInnerHTML={{ __html: md().render(versions[activeVersion].content) }}></div>
+        <ReactMarkdown>{versions[activeVersion].content}</ReactMarkdown>
       </section>
     </div>
   )
