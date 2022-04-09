@@ -1,7 +1,7 @@
 ---
 title: Secuencia básicas con leds en Arduino
 date: Apr 9, 2022 17:42:00
-heroImage: https://raw.githubusercontent.com/munozrc/softlink/main/content/posts/metodologia-de-investigacion/anna-hunko-ajE5goOGzZc-unsplash.jpg
+heroImage: https://raw.githubusercontent.com/munozrc/softlink/main/content/posts/secuencia-basica-de-leds-en-arduino/photo-1527356900876-cae61d8d8462.jpg
 authorDisplayName: munozrc
 authorPhotoURL: https://avatars.githubusercontent.com/u/47870821?v=4
 authorLink: https://github.com/munozrc
@@ -88,3 +88,7 @@ void loop()
   // Creando el efecto de secuencia de encedido y apagado de los leds de forma infinita.
 }
 ```
+
+## Conclusiones
+
+El primer problema que resalta es la de generar nuevas secuencias debemos modificar todo el algoritmo de la secuencia actual, tenemos la ventaja que sabemos los pines a los cuales están conectados los leds por el hecho que están almacenados en un arreglo, pero las instrucciones de la secuencia están implícitas en el código mediante el uso de los ciclos `for` y el método de `digitalWrite()`, el segundo problema es el numero limitado de pines y que por consiguiente nos limita a conectar hasta un máximo de 16 leds por placa (Nota: este numero puede variar según la placa, muchos modelos poseen mas pines de conexión).

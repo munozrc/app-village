@@ -7,6 +7,7 @@ import Head from "next/head"
 
 import { readPostContent } from "../../posts/helpers"
 import { LinkRenderer } from "../../components/LinkRenderer"
+import { SyntaxHighlighter } from "../../components/SyntaxHighlighter"
 import styles from "../../styles/PostPage.module.css"
 
 export default function PostPage ({ date, title, heroImage, content, description }) {
@@ -25,7 +26,12 @@ export default function PostPage ({ date, title, heroImage, content, description
         <img className={styles.post__image} src={heroImage} alt={title} />
       </header>
       <section className={styles.post__content}>
-        <ReactMarkdown components={{ a: LinkRenderer }}>{content}</ReactMarkdown>
+        <ReactMarkdown
+          components={{
+            a: LinkRenderer,
+            code: SyntaxHighlighter
+          }}
+        >{content}</ReactMarkdown>
       </section>
     </div>
   )

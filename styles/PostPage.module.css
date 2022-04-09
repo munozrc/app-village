@@ -43,7 +43,7 @@
 }
 
 .post__content p {
-  font-size: 1.15em;
+  font-size: 1em;
   font-weight: 400;
   opacity: 0.8;
 }
@@ -63,6 +63,12 @@
   color: #8b949e;
   border-left: 0.25em solid #30363d;
   font-size: 1em;
+}
+
+.post__content code {
+  padding: 0.2em 0.4em;
+  background-color: rgba(110, 118, 129, 0.4);
+  border-radius: 6px;
 }
 
 @media only screen and (max-width: 700px) {
