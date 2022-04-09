@@ -28,7 +28,7 @@ export default function ProgramPage ({ versions, icon, name, description, dev })
       <Shape className={styles.shape} />
       <header className={styles.headerWrapper}>
         <section className={styles.headerInfo}>
-          <img className={styles.infoIcon} src={icon} alt={`logo-${String(name)}`} />
+          <img className={styles.infoIcon} src={icon} alt={`logo-${name}`} />
           <h2 className={styles.infoName}>{name}</h2>
         </section>
         <p className={styles.headerDescription}>{description}</p>
