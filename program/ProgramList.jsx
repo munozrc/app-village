@@ -8,7 +8,7 @@ export const ProgramList = ({ list }) => {
   return (
     <div className={styles.gridWrapper}>
       {list.map(({ id, icon, name, slug }) => (
-        <Link key={id} href={`/programas/${slug}`} >
+        <Link key={id} href={`/programs/${slug}`} >
           <a className={styles.itemContainer}>
             <img className={styles.icon} src={icon} alt={name} />
             <h3 className={styles.title}>{name}</h3>
