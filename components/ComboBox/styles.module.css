@@ -1,0 +1,15 @@
+.wrapper {
+  width: 100%;
+  font-size: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.wrapper>option {
+  background: #1e2127;
+  padding: 0;
+}
