@@ -26,7 +26,7 @@ export async function readPrograms (folderParent) {
   return programs
 }
 
-async function readAllFilesInAFolder (path, slug) {
+export async function readAllFilesInAFolder (path, slug) {
   const files = await fs.readdir(path)
   const versions = []
 
