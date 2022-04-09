@@ -21,7 +21,7 @@ export default function ProgramPage ({ versions, icon, name, description, dev })
   return (
     <div className={styles.wrapper}>
       <Head>
-        <title>{name} - Softlink</title>
+        <title>{name} - programa</title>
         <meta name="description" content={description} />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       </Head>
