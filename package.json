@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "marked": "4.0.13",
+    "markdown-it": "12.3.2",
     "next": "12.1.4",
     "react": "18.0.0",
     "react-dom": "18.0.0"
