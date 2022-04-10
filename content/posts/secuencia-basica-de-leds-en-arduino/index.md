@@ -1,20 +1,19 @@
 ---
-title: Secuencia básicas con leds en Arduino
+title: Secuencia básica de leds en Arduino
 date: Apr 9, 2022 17:42:00
 heroImage: https://raw.githubusercontent.com/munozrc/softlink/main/content/posts/secuencia-basica-de-leds-en-arduino/photo-1527356900876-cae61d8d8462.jpg
 authorDisplayName: munozrc
 authorPhotoURL: https://avatars.githubusercontent.com/u/47870821?v=4
 authorLink: https://github.com/munozrc
-description: Como crear secuencias basicas usando leds en Arduino
+description: Como crear efecto de encendido y apagado de leds usando una placa de arduino
 ---
 
 ## Hardware & Software Requerido
 
-- Editor de código
+- IDE de arduino ó Editor de código
 - 6 Leds
+- 6 Resistencias de 1k ohms
 - Placa Arduino
-
-  
 
 ## Circuito
 
@@ -22,26 +21,75 @@ description: Como crear secuencias basicas usando leds en Arduino
 
 ## Proceso
 
-Usando seis leds conectados a la placa mediante entradas diferentes se realizo uno secuencia en cascada de encendido y apagado de los leds uno tras de otro.
+Una secuencia es el orden o disposición de una serie de elementos que se suceden unos a otros, para nuestro caso podemos definir como secuencia el hecho de encender un led tras de otro generando un efecto de cascada o de domino. para ello como primer paso conectaremos los seis leds a un pin de nuestra placa
 
-se define `LEDS_PIN[]` como arreglo donde estarán las referencias a los pines a los cuales estarán conectados los leds, después se hace uso de la variable `size` , esta almacena en memoria el tamaño del arreglo anterior.
+Para que sea nuestro código un poco mas reutilizable y flexible definiremos un arreglo el cual contendrá cada uno de nuestros pines, así será mas sencillo porque no importaría el pin físico sino la posición que tiene asignado en el arreglo:
 
-En la función `void setup()` establecemos todos los pines del arreglo en `OUTPUT` usando un loop `for`, en la función `void loop()` realizamos dos ciclos `for` . El primer ciclo recorre el array y establece el encendido del los led usando el método `digitalWrite()` se asigna un delay de 500 milisegundos, al terminar el delay continua al inicio del `for`, para el siguiente for se usa con la finalidad de apagar todos los leds usando la mismas instrucciones del primer `for` pero con order descendente, por eso se usa `for (uint8_t i = size; i > 0; i--)`.
+```cpp
+int arregloDePines[] = {D0, D1, D2, D3, D4, D5};
+```
+
+Uno de los inconvenientes que tenemos que evitar es el de acceder a una posición del arreglo que no exista en memoria, esto generar un error en ejecución. 😎 tranquilo! no hará que nuestros leds o placa dejen de funcionar, pero no nos permitirá generar el efecto de secuencia. Lo podemos evitar conociendo de antemano el valor total de elementos, para eso usaremos la variable `tamaño`:
+
+```cpp
+int tamaño = sizeof(arregloDePines) / sizeof(arregloDePines[0]);
+```
+
+En el método `setup()` solo tendremos que configurar los pines que usaremos como pines de salida de datos, esto nos permitirá enviar señales de `HIGH` o `LOW` para encender o apagar los leds.  Ya que tenemos definidos los pines de cada led en un arreglo podemos usar un ciclo `for` para iterar cada elemento para obtener el valor del pin en cada posición:
+
+```cpp
+for (int posicion = 0; posicion < tamaño; posicion++)
+{
+  // Asignamos el pin actual como pin de salida
+  pinMode(arregloDePines[posicion], OUTPUT);
+}
+```
+
+Para crear el efecto de encendido de los leds uno tras otro debemos definir un primer ciclo `for` en el método `loop()`, el cual recorre de forma accedente todos los pines del arreglo. Después de cada iteración o ciclo completado aumentamos el valor de `posicion`  usando la instrucción de `posicion++`. Por lo general para que el ciclo recorra o itere de forma accedente debemos iniciar `posicion = 0` y que la condición de salida del ciclo sea comprobar si `posicion` sigue siendo menor al valor que tiene la variable `tamaño`:
+
+```cpp
+for (int posicion = 0; posicion < tamaño; posicion++)
+{
+  // Encedemos el led enviando una seña de HIGH al pin actual
+  digitalWrite(arregloDePines[posicion], HIGH);
+  // Establecemos un tiempo de esperan antes que pase a la siguiente instrucción
+  delay(500);
+}
+```
+
+El segundo ciclo lo usaremos para apagar todos los leds, para apagarlos iniciando desde el ultimo led que fue encendido, debemos recorrer el array de pines de atrás hacia adelante. debemos usar un iterador negativos el cual le reste de uno en uno a nuestra variable `posicion = posicion - 1` una forma mas corta es `posicion--` pero debemos tener en cuenta que `posicion` como valor inicial debe ser el total de elementos del array que en nuestro caso es `tamaño` y colocar como condición de salida sea comprobar si `posicion` sigue siendo mayor que cero.
+
+```cpp
+for (int posicion = tamaño; posicion > 0; posicion--)
+{
+  digitalWrite(arregloDePines[posicion - 1], LOW);
+  delay(500);
+}
+```
+
+Para entender porque restamos 1 a la variable `posicion` en la linea donde llamamos la función:
+
+```cpp
+digitalWrite(arregloDePines[posicion - 1], LOW);  
+```
+
+Es porque si no restamos una posición, estaríamos consultado una posición la cual no existe; Si tenemos un arreglo de seis elementos, pero para acceder a una posición se empieza contando desde cero, nuestro rango de posiciones validas seria `0 - 5`. Regresando a nuestro ejercicio, debemos tener claro que nuestra variable `tamaño` almacena el total de elementos de nuestro arreglo de pines. mas no la la ultima posición o la mayor posición valida del arreglo. 
+
+Al finalizar todas las instrucciones dentro del método `loop()` al ser un ciclo infinito hará que nuestra secuencia se inicie de nuevo.  A continuación mostraremos todo el código 🤗
 
 ## Código
 
 ```cpp
-// Establemos las variables del archivo
 // Este es un arreglo de los pines a los cuales estan conectados los leds
-uint8_t arregloDePines[] = {D0, D1, D2, D3, D4, D5};
+int arregloDePines[] = {D0, D1, D2, D3, D4, D5};
 
-// Esta variables nos permite saber el tamaño del anterios arreglo de pines
-uint8_t tamaño = sizeof(arregloDePines) / sizeof(arregloDePines[0]);
+// Esta variables nos permite saber el número total de elementos del arreglo
+int tamaño = sizeof(arregloDePines) / sizeof(arregloDePines[0]);
 
 void setup()
 {
   // Configuramos todos los pines del arreglo como pines de salida
-  for (uint8_t posicion = 0; posicion < tamaño; posicion++)
+  for (int posicion = 0; posicion < tamaño; posicion++)
   {
     pinMode(arregloDePines[posicion], OUTPUT);
   }
@@ -49,15 +97,8 @@ void setup()
 
 void loop()
 {
-  /*
-    Para crear el efecto de encendido de los leds unos tras otros
-    debemos usar el ciclo for el cual recorre de forma acedente todos los pines
-    del arreglo. Despues de cada ciclo aumentamos el valor
-    de posicion.
-    NOTA: La condicion que debe cumplir el ciclo para que no termine es que la
-    variable posicion sea menor al tamaño del arreglo.
-  */
-  for (uint8_t posicion = 0; posicion < tamaño; posicion++)
+  // Ciclo para encender todos los leds con un delay de 500 milisegundos
+  for (int posicion = 0; posicion < tamaño; posicion++)
   {
     // Encedemos el led enviando una seña de HIGH al pin actual
     digitalWrite(arregloDePines[posicion], HIGH);
@@ -65,27 +106,14 @@ void loop()
     delay(500);
   }
 
-  /*
-    Despues del enceder todos los leds debemos apagarlos de forma desendente, para lograrlo
-    debemos recorrer el arreglo de pines de atras hacia a adelante, lo haremos definiendo como valor
-    inicial de posicion el tamaño del arreglo, que sera de 6, despues de cada ciclo decrementamos el valor
-    de posicion asi pasara de 5 a 4, de 3 a 2... hasta llegar a 1
-    NOTA: La condicion que debe cumplir el ciclo para que no termine es que la
-    variable posicion sea mayor a cero.
-  */
-  for (uint8_t posicion = tamaño; posicion > 0; posicion--)
+  // Ciclo para apagar todos los leds en orden desendente con un delay de 500 milisegundos
+  for (int posicion = tamaño; posicion > 0; posicion--)
   {
     // Apagamos el led enviado una señal de LOW al pin
-    // NOTA: para acceder a un elemento del array por ciclo usamos "posicion - 1", porque
-    // en el arreglo no existe la posicion 6, ya que se cuenta desde la posicion 0 a 5
-    // dando como resultado 6 elementos.
     digitalWrite(arregloDePines[posicion - 1], LOW);
     // Establecemos un tiempo de esperan antes que pase a la siguiente instrucción
     delay(500);
   }
-
-  // Al terminar todos los ciclos, se hace un nuevo llamado a la funcion loop()
-  // Creando el efecto de secuencia de encedido y apagado de los leds de forma infinita.
 }
 ```
 
