@@ -34,18 +34,24 @@
 
 .post__content h2 {
   font-size: 1.5em;
-  padding-bottom: 0.3em;
-  border-bottom: 1px solid #373e47;
-  margin-top: 24px;
-  margin-bottom: 20px;
+  margin: 48px 0 6px;
   font-weight: 600;
   line-height: 1.25;
 }
 
-.post__content p {
+.post__content ul {
+  margin-top: 24px;
+  font-size: 1.1em;
+  opacity: 0.7;
+}
+
+.post__content>p {
+  text-align: left;
+  margin-bottom: 32px;
+  line-height: 28px;
   font-size: 1.13em;
   font-weight: 400;
-  opacity: 0.8;
+  opacity: 0.65;
 }
 
 .post__content ul {
@@ -69,6 +75,7 @@
   padding: 0.2em 0.4em;
   background-color: rgba(110, 118, 129, 0.4);
   border-radius: 6px;
+  font-size: 0.96em;
 }
 
 @media only screen and (max-width: 700px) {
