@@ -10,13 +10,19 @@ import { LinkRenderer } from "../../components/LinkRenderer"
 import { SyntaxHighlighter } from "../../components/SyntaxHighlighter"
 import styles from "../../styles/PostPage.module.css"
 
-export default function PostPage ({ date, title, heroImage, content, description }) {
+export default function PostPage ({ date, title, heroImage, content, description, slug }) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>{title} - Post - Softlink</title>
+        <title>{title} - Softlink</title>
         <meta name="description" content={description} />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta property="og:url" content={`https://softlink.vercel.app/posts/${slug}`}></meta>
+        <meta property="og:type" content="article"></meta>
+        <meta property="og:title" content={title}></meta>
+        <meta property="og:image" content={heroImage}></meta>
+        <meta property="og:description" content={description}></meta>
+        <meta property="og:site_name" content="Softlink"></meta>
       </Head>
       <header>
         <p className={styles.post__date}>
