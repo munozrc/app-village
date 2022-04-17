@@ -119,4 +119,6 @@ void loop()
 
 ## Conclusiones
 
+<video src="https://cdn.discordapp.com/attachments/692177227571527721/965394583305453628/secuenciaUnicoLedV2.mp4" controls></video>
+
 El primer problema que resalta es la de generar nuevas secuencias debemos modificar todo el algoritmo de la secuencia actual, tenemos la ventaja que sabemos los pines a los cuales están conectados los leds por el hecho que están almacenados en un arreglo, pero las instrucciones de la secuencia están implícitas en el código mediante el uso de los ciclos `for` y el método de `digitalWrite()`, el segundo problema es el numero limitado de pines y que por consiguiente nos limita a conectar hasta un máximo de 16 leds por placa (Nota: este numero puede variar según la placa, muchos modelos poseen mas pines de conexión).
