@@ -61,6 +61,8 @@
 .post__content>p>video {
   border-radius: 8px;
   margin-top: 30px;
+  max-width: 100%;
+  width: 100%;
 }
 
 .post__content a {
