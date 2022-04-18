@@ -5,6 +5,7 @@ import fs from "node:fs"
 import ReactMarkdown from "react-markdown"
 import Head from "next/head"
 import rehypeRaw from "rehype-raw"
+import remarkGfm from "remark-gfm"
 
 import { readPostContent } from "../../posts/helpers"
 import { LinkRenderer } from "../../components/LinkRenderer"
@@ -35,6 +36,7 @@ export default function PostPage ({ date, title, heroImage, content, description
       <section className={styles.post__content}>
         <ReactMarkdown
           rehypePlugins={[rehypeRaw]}
+          remarkPlugins={[remarkGfm]}
           components={{
             a: LinkRenderer,
             code: SyntaxHighlighter
