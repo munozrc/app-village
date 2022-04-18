@@ -1,6 +1,6 @@
 ---
 title: Multiplexación de LEDs en Arduino
-date: Apr 17, 2022 20:28:00
+date: Apr 14, 2022 20:28:00
 heroImage: https://raw.githubusercontent.com/munozrc/softlink/main/content/posts/multiplexacion-de-leds-en-arduino/vishnu-mohanan.jpg
 authorDisplayName: munozrc
 authorPhotoURL: https://avatars.githubusercontent.com/u/47870821?v=4
