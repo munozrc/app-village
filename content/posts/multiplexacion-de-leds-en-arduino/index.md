@@ -108,3 +108,13 @@ void encenderLed(int led_num)
   }
 }
 ```
+
+En este caso sabemos que para encender cualquier LED de nuestra matriz, debemos de tener un PIN en estado `HIGH`, otro PIN en estado `LOW` y el último PIN en modo INPUT así que, esto lo podemos sacar a una función donde le digamos el número de pin en cada caso.
+
+Esta función es ponerEstados y admite 3 parámetros, pinHigh (el pin que debemos poner a HIGH), pinLow (el pin que debemos poner a `LOW`) y pinInput (el pin que debemos poner en modo `INPUT`). La función encenderLed admite como parámetro el LED que queremos encender y, a través de un switch (no es más que una cadena de if anidados), decidiremos que pines tienen que estar en estado `HIGH`, `LOW` o en modo INPUT.
+
+## Conclusiones
+
+La técnica de Charlieplexing nos dice que si tenemos **n** pins podremos controlar  **n x (n - 1)** por lo tanto, con 3 pines como en el ejemplo podremos controlar **3 x (3 - 1) = 6**.
+
+<video src="https://cdn.discordapp.com/attachments/692177227571527721/965443331880525844/VID_20220413_124600499.mp4" controls></video>
