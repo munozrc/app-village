@@ -101,8 +101,9 @@
   border: 1px solid #dfe2e5;
 }
 
-.post__content image {
+.post__content img {
   border-radius: 8px;
+  margin: 0 auto;
 }
 
 
