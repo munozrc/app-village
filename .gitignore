@@ -1,8 +1,0 @@
-/node_modules
-/.next/
-/out/
-/build
-.env*.local
-.vercel
-package-lock.json
-npm-debug.log*
