@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom'
+import SearchField from '../components/search-field'
+
 import styles from '../styles/home.module.css'
 
 export const Home = () => {
@@ -16,15 +18,15 @@ export const Home = () => {
               <Link to="/drivers">Drivers</Link>
             </nav>
           </section>
-          <div className={styles.hero}>
-            <h2>La fuente de Internet de Software gratuito.</h2>
-            <p>Recopilación de enlaces directos a programas, drivers y aplicaciones móviles.</p>
-          </div>
-          <div>
-            <form>
-              <input type="text" placeholder="Buscar..." />
-            </form>
-          </div>
+          <section className={styles.wrapperHero}>
+            <div className={styles.hero}>
+              <h2>La fuente de Internet de Software gratuito.</h2>
+              <p>Recopilación de enlaces directos a programas, drivers y aplicaciones móviles.</p>
+            </div>
+            <div className={styles.center}>
+              <SearchField onSubmit={() => {}}/>
+            </div>
+          </section>
         </div>
       </header>
       <section className={styles.content}>

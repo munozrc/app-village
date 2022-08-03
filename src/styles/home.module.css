@@ -3,6 +3,11 @@
   height: 100%;
 }
 
+.center {
+  display: flex;
+  justify-content: center;
+}
+
 .wrapper {
   width: 100%;
   max-width: 1000px;
@@ -46,6 +51,15 @@
   text-decoration: none;
 }
 
+.wrapperHero {
+  height: 466px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding-bottom: 94px;
+  gap: 20px;
+}
+
 .hero {
   display: flex;
   flex-direction: column;
@@ -72,8 +86,4 @@
 
 .content {
   width: 100%;
-}
-
-.content>.wrapper {
-  height: 500px;
 }
