@@ -13,8 +13,8 @@ export const Home = () => {
               <Link to="/">ToolPack</Link>
             </h1>
             <nav className={styles.navigation}>
-              <Link to="/programas">Programas</Link>
-              <Link to="/aplicaciones">Aplicaciones</Link>
+              <Link to="/desktop">Desktop</Link>
+              <Link to="/android">Android</Link>
               <Link to="/drivers">Drivers</Link>
             </nav>
           </section>

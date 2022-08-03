@@ -37,6 +37,8 @@
 .navigation>a {
   color: #000000;
   text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
 }
 
 
