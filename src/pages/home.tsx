@@ -10,7 +10,7 @@ export const Home = () => {
         <div className={styles.wrapper}>
           <section className={styles.navbar}>
             <h1 className={styles.branding}>
-              <Link to="/">ToolPack</Link>
+              <Link to="/">AppVillage</Link>
             </h1>
             <nav className={styles.navigation}>
               <Link to="/desktop">Desktop</Link>
