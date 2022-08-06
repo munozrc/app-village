@@ -11,7 +11,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <Router>
     <Navbar />
     <Routes>
-      <Route path="apps" element={<Apps />} />
+      <Route path=":category" element={<Apps />} />
       <Route path="/" element={<Home />} />
       <Route path="*" element={<h2>404</h2>}/>
     </Routes>
