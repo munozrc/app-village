@@ -1,9 +1,11 @@
 import { SearchFieldSelection } from '../components/input'
 import { SoftwareApps } from '../types'
+import { useNavigate } from 'react-router-dom'
 
 import styles from '../styles/home.module.css'
 
 export const Home = () => {
+  const navigate = useNavigate()
   return (
     <main className={styles.wrapper}>
       <section className={styles.container}>
@@ -14,8 +16,7 @@ export const Home = () => {
         <div className={styles.search}>
           <SearchFieldSelection
             options={SoftwareApps}
-            onChangeSelect={() => {}}
-            onSubmit={() => {}}
+            onSubmit={(query, category) => navigate(`/${category}`)}
           />
         </div>
       </section>
