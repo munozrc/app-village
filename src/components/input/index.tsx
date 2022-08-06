@@ -10,15 +10,14 @@ interface SearchFieldProps {
 
 interface SearchFieldSelectionProps<T> {
   options: readonly T[]
-  onSubmit: (value: string) => void
-  onChangeSelect: (option: T) => void
+  onSubmit: (value: string, option: T) => void
 }
 
-export const SearchFieldSelection = <T extends string>({ options, onSubmit, onChangeSelect}: SearchFieldSelectionProps<T>) => {
+export const SearchFieldSelection = <T extends string>({ options, onSubmit }: SearchFieldSelectionProps<T>) => {
   const [optionActive, setOptionActive] = useState<T>(options[0])
   return (
     <div className={styles.container}>
-      <SearchInput onSubmit={onSubmit}/>
+      <SearchInput onSubmit={(value) => onSubmit(value, optionActive)}/>
       <div className={styles.verticalDivider} />
       <SelectInput options={options} setValue={setOptionActive} value={optionActive} />
     </div>
