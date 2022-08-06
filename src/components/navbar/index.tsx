@@ -11,9 +11,9 @@ export const Navbar = () => {
           <Logo />
         </Link>
         <nav className={styles.navigation}>
-          <Link to="/desktop">Desktop</Link>
-          <Link to="/android">Android</Link>
-          <Link to="/drivers">Drivers</Link>
+          <Link to="apps">Desktop</Link>
+          <Link to="apps">Android</Link>
+          <Link to="apps">Drivers</Link>
         </nav>
       </div>
     </header>
