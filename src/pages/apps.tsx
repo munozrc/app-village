@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom'
 import { SearchField } from '../components'
+
 import styles from '../styles/apps.module.css'
 
 export const Apps = () => {

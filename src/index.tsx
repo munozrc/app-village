@@ -1,9 +1,7 @@
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Home, Apps } from './pages'
 import { Navbar } from './components'
-
-import { Home } from './pages'
-import { Apps } from './pages/apps'
 
 import './styles/global.css'
 

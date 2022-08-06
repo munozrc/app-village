@@ -1,6 +1,6 @@
+import { useNavigate } from 'react-router-dom'
 import { SearchFieldSelection } from '../components/input'
 import { SoftwareApps } from '../types'
-import { useNavigate } from 'react-router-dom'
 
 import styles from '../styles/home.module.css'
 
