@@ -1,4 +1,5 @@
-import SearchField from '../components/search-field'
+import { SearchFieldSelection } from '../components/input'
+import { SoftwareApps } from '../types'
 
 import styles from '../styles/home.module.css'
 
@@ -11,7 +12,11 @@ export const Home = () => {
           <p>Recopilación de enlaces directos a programas, drivers y aplicaciones móviles.</p>
         </div>
         <div className={styles.search}>
-          <SearchField onSubmit={() => {}}/>
+          <SearchFieldSelection
+            options={SoftwareApps}
+            onChangeSelect={() => {}}
+            onSubmit={() => {}}
+          />
         </div>
       </section>
     </main>
