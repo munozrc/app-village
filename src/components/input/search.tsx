@@ -26,6 +26,7 @@ const SearchInput = ({ onSubmit }: SearchInputProps) => {
       <SearchIcon color="#747474" size={17}/>
       <input 
         type="text"
+        name="search"
         placeholder="Buscar..."
         value={value}
         onChange={handleChangeInput}
