@@ -1,0 +1,16 @@
+{
+  "name": "Opera GX",
+  "date": "July 22, 2022 11:00:00",
+  "dev": "Opera Software",
+  "icon": "apps/opera-gx.webp",
+  "description": "Es una versión especial del navegador Opera que incluye funciones especiales diseñadas para complementar los juegos.",
+  "versions": [
+    {
+      "name": "v89.0.4447.64",
+      "url": "https://ftp.opera.com/ftp/pub/opera_gx/89.0.4447.64/win/Opera_GX_89.0.4447.64_Setup_x64.exe",
+      "language": "Multilenguaje",
+      "system": "Windows (64-bit)",
+      "extension": ".exe"
+    }
+  ]
+}
