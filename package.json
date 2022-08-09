@@ -6,7 +6,6 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "data:dev": "ts-node --skipProject scripts/data.ts -isDev",
     "data": "ts-node --skipProject scripts/data.ts"
   },
   "dependencies": {

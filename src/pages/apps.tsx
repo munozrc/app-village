@@ -1,6 +1,8 @@
 import { useParams } from 'react-router-dom'
 import { SearchField } from '../components'
 
+import data from '../data.json'
+
 import styles from '../styles/apps.module.css'
 
 export const Apps = () => {
@@ -14,6 +16,11 @@ export const Apps = () => {
         </header>
         <SearchField onSubmit={() => {}}/>
       </section>
+      <ul>
+        {data.desktop.map((app) => (
+          <li key={app.name}><img src={app.icon}/></li>
+        ))}
+      </ul>
     </main>
   )
 }
