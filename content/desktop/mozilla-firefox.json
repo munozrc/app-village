@@ -2,7 +2,7 @@
   "name": "Mozilla Firefox",
   "date": "July 22, 2021 11:00:00",
   "dev": "Mozilla Fundation",
-  "icon": "/mozilla-firefox.webp",
+  "icon": "apps/mozilla-firefox.webp",
   "description": "Es un software gratuito y de código abierto, creado por una comunidad de miles de personas de todo el mundo.",
   "versions": [
     {
