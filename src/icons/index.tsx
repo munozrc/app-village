@@ -1,3 +1,5 @@
-export * from './search-icon'
 export * from './chevron-icon'
 export * from './close-icon'
+export * from './download-icon'
+export * from './package-icon'
+export * from './search-icon'
