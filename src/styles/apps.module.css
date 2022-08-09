@@ -35,3 +35,68 @@
 .title>p>strong {
   text-transform: capitalize;
 }
+
+.results {
+  display: flex;
+  margin-top: 40px;
+  gap: 16px;
+}
+
+.results>li {
+  width: 334px;
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  padding: 20px;
+  gap: 10px;
+}
+
+.results>li>header {
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  gap: 9px;
+}
+
+.results>li>header>img {
+  width: 35px;
+  height: 35px;
+}
+
+.results>li>header>h4 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.results>li>p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 15px;
+  color: #535353;
+}
+
+.results>li>footer {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0px;
+  gap: 5px;
+}
+
+.results>li>footer>button {
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #464646;
+  background: none;
+  border: none;
+  outline: none;
+}
