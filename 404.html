@@ -10,14 +10,14 @@
 </head>
 <body>
   <script>
-    var { protocol, hostname, port, pathname, search, hash, replace } = window.location
-    var pathSegmentsToKeep = 1 // NOT using a custom domain
+    const { protocol, hostname, port, pathname, search, hash } = window.location
+    const pathSegmentsToKeep = 1 // NOT using a custom domain
 
-    var PORT = port ? `:${port}`: ''
-    var REPO = pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/')
-    var PATHNAME = pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~')
+    const PORT = port ? `:${port}`: ''
+    const REPO = pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/')
+    const PATHNAME = pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~')
 
-    replace(`${protocol}//${hostname}${PORT}${REPO}/?/${PATHNAME}${hash}`)
+    window.location.replace(`${protocol}//${hostname}${PORT}${REPO}/?/${PATHNAME}${hash}`)
   </script>
 </body>
 </html>
