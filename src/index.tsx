@@ -6,7 +6,7 @@ import { Navbar } from './components'
 import './styles/global.css'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <Router>
+  <Router basename="/app-village">
     <Navbar />
     <Routes>
       <Route path=":category" element={<Apps />} />
