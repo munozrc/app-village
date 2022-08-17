@@ -10,6 +10,10 @@ const base = mode === 'production' && isGitHubPages ? '/' + folderName : '/'
 export default defineConfig({
   base,
   root: "src",
+  build: {
+    outDir: '../dist',
+    assetsDir: './'
+  },
   plugins: [react()],
   publicDir: "../public"
 })
